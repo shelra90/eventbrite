@@ -1,6 +1,12 @@
-function App() {
+import react from 'react'
+import Header from './components/Header';
+
+const App = () => {
   return (
-    <><h1>Sample Title</h1></>
+    <>
+    <Header />
+    <><h1>eventbrite</h1></>
+    </>
   );
 }
 
