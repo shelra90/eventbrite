@@ -1,11 +1,17 @@
 import react from 'react'
+import {Container} from 'react-bootstrap'
 import Header from './components/Header';
+
 
 const App = () => {
   return (
     <>
     <Header />
-    <><h1>eventbrite</h1></>
+    <main>
+      <Container>
+
+    </Container>
+    </main>
     </>
   );
 }
