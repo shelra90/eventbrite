@@ -1,4 +1,4 @@
-const event = [
+const events = [
     {
     "Event Name":"2023 Asbury Park Vegan Food Festival",
     "Date":"May 20, 2023;11am-5pm EDT",
@@ -88,4 +88,4 @@ const event = [
     },
     ]
 
-    export default event
+    export default events
