@@ -1,14 +1,17 @@
 import React from 'react'
 import { Container, Navbar, Nav } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
+import SearchBar from './SearchBar';
+
 
 const Header = () => {
   return (
     <header>
         <Navbar bg="light" variant="light" expand="lg" collapseOnSelect>
             <Container>
-            <h1 style= {{color: '#E65100'}}>eventbrite</h1>
+            <h1 className="title">eventbrite</h1>
             <SearchBar  placeholder="Search Events..."> </SearchBar>
-            <Nav.Link href="/magnifying-glass" ><i class="fa-solid fa-magnifying-glass"></i></Nav.Link>
+            <Button><i class="fa-solid fa-magnifying-glass"></i></Button>
             <Navbar.Brand href="/"></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -22,21 +25,5 @@ const Header = () => {
     </header>
   )
 }; 
-/*  ignore */
-const SearchBar = ({placeholder, data}) => {
-    return (
-      <div className="search">
-    <div className="searchInputs">
-        <div className="dataResult">
-          <input type="text" placeholder={placeholder}/>
-             <div className="searchIcon">
-              </div>
-          </div> 
-      </div>
-      </div> 
-  
-    )
-  }
 
-/*  ignore */
 export default Header
