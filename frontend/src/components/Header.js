@@ -9,7 +9,7 @@ const Header = () => {
     <header>
         <Navbar bg="light" variant="light" expand="lg" collapseOnSelect>
             <Container>
-            <h1 className="title">eventbrite</h1>
+            <h1 className="title">Eventbrite</h1>
             <SearchBar  placeholder="Search Events..."> </SearchBar>
             <Button><i class="fa-solid fa-magnifying-glass"></i></Button>
             <Navbar.Brand href="/"></Navbar.Brand>
