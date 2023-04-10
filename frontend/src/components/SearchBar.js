@@ -17,5 +17,8 @@ const SearchBar = ({placeholder, data}) => {
 }
 
 export default SearchBar
+
+
+
 /*  ignore */
 

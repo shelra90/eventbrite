@@ -5,18 +5,16 @@ import SearchBar from './components/SearchBar';
 
 
 
+
 const App = () => {
   return (
     <div className="App">
-    
-   
-        <Header >
+    <Header >
           <Container>
-          <SearchBar placeholder="Enter Event"/>
+          <SearchBar placeholder="Enter Events"/>
+          <input type="text" placeholder="Search Events..."/>
           </Container>
         </Header>
-    
-    
     </div>
   );
 }

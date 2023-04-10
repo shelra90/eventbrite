@@ -6,13 +6,12 @@ const Header = () => {
     <header>
         <Navbar bg="light" variant="light" expand="lg" collapseOnSelect>
             <Container>
-            <h1 style={{ color: '#FF6D00' }}>eventbrite</h1>
-            <SearchBar placeholder="Search Event"/>
-            <Nav.Link href="/magnifying-glass"><i class="fa-solid fa-magnifying-glass">
-                        </i></Nav.Link>
-                <Navbar.Brand href="/"></Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+            <h1 style= {{color: '#E65100'}}>eventbrite</h1>
+            <SearchBar  placeholder="Search Events..."> </SearchBar>
+            <Nav.Link href="/magnifying-glass" ><i class="fa-solid fa-magnifying-glass"></i></Nav.Link>
+            <Navbar.Brand href="/"></Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                     <Nav.Link href="/login"><i className='fas fa-user'></i> Sign In</Nav.Link>
                     <Nav.Link href="/cart"><i class="fa-sharp fa-solid fa-cart-shopping">
