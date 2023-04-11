@@ -1,13 +1,16 @@
-
+import { Container } from "react-bootstrap";
+import HomeScreen from './screens/HomeScreen';
 import Header from './components/Header'
-
-const App = () => {
+  function App() {
   return (
-    <div className="App">
-    <Header >
-          
-        </Header>
-    </div>
+    <>
+    <Header />
+    <main>
+      <Container>
+        <HomeScreen/>
+      </Container>
+    </main>
+    </>
   );
 }
 
