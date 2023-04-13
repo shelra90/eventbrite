@@ -12,7 +12,7 @@ const events = [
     {
     EventName:"2023 Taste of Spring",
     Date:"Friday, April 14 · 5:30 - 9pm EDT",
-    Description:"Mayor Raymond A. Giacobbe, the Rahway City Council, and the City of Rahway’s Special Improvement District invite you to get your taste buds ready for our premier Restaurant Tasting Event, happening in Downtown Rahway", 
+    Description:"Mayor Raymond A. Giacobbe, the Rahway City Council, and the City of Rahway’s Special Improvement District invite you to get your taste buds ready for our premier Restaurant Tasting Event, happening in Downtown Rahway.", 
     Image:"/events_images/TasteOfSpring.png",
     Location:"Rahway Recreation Center 275 East Milton Avenue Rahway, NJ 07065",
     Price:35,
@@ -40,7 +40,7 @@ const events = [
     {
     EventName:"Country Night - Live DJ & Line Dance Instructor",
     Date:"April 21 · 8pm - April 22 · 2am EDT",
-    Description:"Country Night - Live DJ & Line Dance Instructor!Sing & dance to a whole night of country hits! 1 Party 2 FLOORS ALL THE BEST COUNTRY HITS",
+    Description:"Country Night - Live DJ & Line Dance Instructor!Sing & dance to a whole night of country hits! 1 Party 2 FLOORS ALL THE BEST COUNTRY HITS.",
     Image:"/events_images/countryNight.png",
     Location:"Big Shots Restaurant & Lounge 780 U.S. 1 Woodbridge Township, NJ 08830",
     StartingPrice:20,
@@ -50,7 +50,7 @@ const events = [
     {
     EventName:"Gypsy: A Celebration of the music of Stevie Nicks and Fleetwood Mac",
     Date:"Saturday, April 22 · 8 - 11pm EDT",
-    Description:"GYPSY faithfully recreates ’Stevie Nicks' live show and the music of Fleetwood Mac with striking accuracy. Diane Lutz gives a stunning performance as Stevie Nicks with spot-on vocals and visuals that magically capture Nicks’ stage presence.psy performs the greatest hits from Stevie Nicks and Fleetwood Mac, including: Stand Back, Rhiannon, Gold Dust Woman, Don’t Stop, Stop Dragging My Heart Around, Silver Springs and so many more! Your audience will be on their feet, singing along to all the hits", 
+    Description:"GYPSY faithfully recreates ’Stevie Nicks' live show and the music of Fleetwood Mac with striking accuracy. Diane Lutz gives a stunning performance as Stevie Nicks with spot-on vocals and visuals that magically capture Nicks’ stage presence.psy performs the greatest hits from Stevie Nicks and Fleetwood Mac, including: Stand Back, Rhiannon, Gold Dust Woman, Don’t Stop, Stop Dragging My Heart Around, Silver Springs and so many more! Your audience will be on their feet, singing along to all the hits.", 
     Image:"/events_images/GypsyMusicFestival.png",
     Location:"Rosen Performing Arts Center 1 Pike Drive Wayne, NJ 07470",
     Price:40,
