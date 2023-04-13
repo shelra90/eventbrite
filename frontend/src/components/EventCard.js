@@ -4,7 +4,7 @@ import EventScreen from '../screens/EventScreen';
 
 const EventCard = ({eve}) => {
   var buttonName="Reserve a spot";
-  console.log(eve.Price);
+  
   const priceTag=eve.Price!==undefined? "Price: $"+ eve.Price: "Starts from $"+ eve.StartingPrice;
   
   const [isOpen, setIsOpen] = useState(false);
@@ -45,6 +45,7 @@ const EventCard = ({eve}) => {
       {isOpen && <EventScreen
       eve={eve}
       handleClose={togglePopup}
+      priceTag={priceTag}
     />}
     </div>
       
