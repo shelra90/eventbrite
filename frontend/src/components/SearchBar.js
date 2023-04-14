@@ -1,4 +1,4 @@
-/*  ignore */
+
 import React from 'react'
 
 const SearchBar = ({placeholder, data}) => {
@@ -17,5 +17,9 @@ const SearchBar = ({placeholder, data}) => {
 }
 
 export default SearchBar
+
+
+
+
 
 
