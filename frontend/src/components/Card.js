@@ -1,17 +1,21 @@
 import React from "react";
 import { Container, Card } from "react-bootstrap";
 
-const Cateogries = () => {
+
+const Cateogry = () => {
   return (
     <Container>
     <Card>
+    <Card.Title>
+      Check Out These Trending Categories
+      </Card.Title>
     <Card.Body>
-           <Card.Title>Check Out These Trending Categories</Card.Title>
+      
     </Card.Body>
     </Card>
     </Container>
   )
 }
 
-export default Categories
+export default Cateogry
 
