@@ -13,14 +13,33 @@ code {
 }
 
 .title {
-  font-family: "Ariel-bold";
+
+  font-family: "Ariel";
   color:#E65100;
   font-size: 30px;
   text-align: left;
   width:40%;
 }
 
+=======
+  color:#E65100
+}
 
-
-
-
+main{
+  min-height:80vh;
+}
+.venue{
+  font-size: 12px;
+}
+.button{
+  margin-left: 22%;
+  margin-top: 15px;
+}
+.timings{
+  font-size: 12px;
+  color:rgb(15, 15, 176);
+}
+.price{
+  font-size: 15px;
+}
+>>>>>>> refs/remotes/origin/dev1
