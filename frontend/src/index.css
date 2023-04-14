@@ -23,19 +23,19 @@ code {
 
 
 .SearchBar {
-  width: 200%;
-  height: 50%;
+  width: 250%;
+  height: 70%;
   padding:200px;
   border-radius: 300px;
 }
 
   .search {
       width: 40%;
-      height: 50%;
+      height: 70%;
       padding:30px;
       border-width:40px;
+      margin-right:-2.3%;
   }
- 
 
 
 main{
