@@ -1,12 +1,14 @@
 
-import React from 'react'
+import React from 'react';
+import { Form } from 'react-bootstrap'
 
 const SearchBar = ({placeholder, data}) => {
   return (
     <div className="search">
   <div className="searchInputs">
       <div className="dataResult">
-        <input type="text" placeholder={placeholder}/>
+        <Form.Control type="text" size="md" placeholder={placeholder}> 
+        </Form.Control>
            <div className="searchIcon">
             </div>
         </div> 
@@ -15,7 +17,6 @@ const SearchBar = ({placeholder, data}) => {
 
   )
 }
-
 export default SearchBar
 
 
