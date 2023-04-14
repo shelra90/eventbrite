@@ -65,6 +65,43 @@ const events = [
     StartingPrice:25,
     EndingPrice:70
     },
+    {
+        EventName: "Bayville Fest VII",
+        Date: "Starts on Saturday, June 24 · 12pm EDT",
+        Description: "The Bayville Music Festival has been around since 2016, and has grown to become New Jersey’s only Reggae Rock festival. Hosted by NJ’s own native band - Green Knuckle Material, this year’s festival will be one to remember.What started as a DIY backyard show has now evolved into an event you won’t want to miss with the biggest lineup in the Reggae Rock scene yet.Bayville VII will be moving from the backyard to a beautiful local bayside venue called B2 Bistro & Bar. Along with some great music, you’ll also enjoy majestic views of Barnegat Bay, amazing food and drinks, a full service Tiki Bar, and for those that opt for our VIP package - access to a beautiful in-ground pool",
+        Image: "bayville_Fest.jpeg",
+        Location: "B2 Bistro + Bar 125 Bayview Avenue Berkeley Township, NJ 08721",
+        StartingPrice: $50,
+        EndingPrice: $100
+    },
+    
+    {
+        EventName: "Live Band EMO Night w/ Feeling Emo",
+        Date: "April 22 · 7pm - April 23 · 1am EDT",
+        Description:"Emo rock music covers of bands such as Taking Back Sunday, Fall Out Boy, Paramore, Jimmy Eat World, My Chemical Romance, The Used, & MANY MORE!Wear your favorite band Tee, or come as yourself!",
+        Image:"emo_night.jpeg",
+        Location:"Big Shots Restaurant & Lounge 780 U.S. 1 Woodbridge Township, NJ 08830",
+        StartingPrice: $5,
+        EndingPrice: $20
+    },
+    
+    {
+        EventName:"Klubs and Kocktails with the NBA Nupes",
+        Date:"Sunday, April 16 · 5 - 8pm EDT",
+        Description:"Enjoy an evening of good fun and great drinks with the NBA Nupes! Swing on by and enjoy the party!",
+        Image:"klubs_kocktails.jpeg",
+        Location:"Topgolf 1013 U.S. 1 Edison, NJ 08817",
+        Price: $70,
+    },
+    
+    {
+        EventName: "WrestleShow NJ",
+        Date:"Saturday, May 20 · 10am - 4pm EDT",
+        Description: "New Jersey’s Hottest New Wrestling Convention",
+        Image:"wrestle_show.jpeg",
+        Location: "Middletown Sports Complex 214 Harmony Road Middletown Township, NJ 07748",
+        Price: $15,
+    },
     
     
     {
@@ -75,6 +112,35 @@ const events = [
     Location:"Bowlero North Brunswick 1 Carolier Lane North Brunswick Township, NJ 08902",
     StartingPrice:20,
     EndingPrice:30
+    },
+
+    {
+        EventName:"Jersey City Craft Beer Fest",
+        Date: "Friday, May 5 6:30 - 10pm EDT",
+        Description: "The Ferry terminal at Liberty State Park will be hosting an eclectic local variety of superbly fermented beer and cider in all styles combining the best elements of a Beer Garden with the staggering array of choices found only at a Craft Beer Festival. Guests will enjoy craft beer samples for the entire evening paired with live entertainment, Food and Interactive Games",
+        Image: "jerseycity_craft_beer_fest.jpeg",
+        Location: "Liberty State Park Ferry Terminal 1 Audrey Zapp Drive Jersey City, NJ 07305",
+        StartingPrice: $15,
+        EndingPrice: $60
+    },
+
+    {
+        EventName: "Great Swamp Sundays Group Bike Ride",
+        Date: "April 16 Sun, 9:00 AM - 12:00 PM EDT ",
+        Description:"Join Trek Stirling every third Sunday of the month on beginner/intermediate level group road rides around the Great Swamp Wildlife Refuge, a popular area for local riders with scenic farmlands and wildlife all around to appreciate. We appreciate our local riders and want to provide them with a friendly and consistent group ride",
+        Image:"great_swamp.jpeg",
+        Location:"Trek Bicycle Stirling 393 Main Avenue Long Hill, NJ 07980",
+        Price:"Free",
+        },
+    
+    {
+        EventName: "Midnight Market",
+        Date: "Friday, May 5 · 6:30 - 11:59pm EDT",
+        Description: "Midnight Market is an exciting take on the classic night market scene. We are excited to return to Jersey City at a new venue in the Mural Arts District",
+        Image:"MidnightMarket.jpeg",
+        Location: "MAD JC 227 Coles Street Jersey City, NJ 07310",
+        StartingPrice: $10,
+        EndingPrice: $25
     },
     ]
 
