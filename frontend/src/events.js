@@ -6,7 +6,7 @@ const events = [
     Image:'/events_images/asburyPark.png',
     Location:"Bradley Park 101-199 5th Ave Asbury Park, NJ 07712",
     StartingPrice: 20,
-    EndingPrice: 50,
+    EndingPrice: 50
     },
     
     {
@@ -15,7 +15,7 @@ const events = [
     Description:"Mayor Raymond A. Giacobbe, the Rahway City Council, and the City of Rahway’s Special Improvement District invite you to get your taste buds ready for our premier Restaurant Tasting Event, happening in Downtown Rahway.", 
     Image:"/events_images/TasteOfSpring.png",
     Location:"Rahway Recreation Center 275 East Milton Avenue Rahway, NJ 07065",
-    Price: 35,
+    Price: 35
     },
     
     {
@@ -24,7 +24,7 @@ const events = [
     Description: "Hosted by the Asbury Park Chamber of Commerce, this event features small bites, samplings and demos at restaurants, lounges, cafes, juice bars, and other uniquely Asbury Park locations. Foodies will be treated to some of the classic restaurant pioneers of Asbury Park as well as recent newcomers to the blooming Asbury Park culinary landscape.",
     Image: "/events_images/asburyParkRestaurantTour.png",
     Location:"Asbury Park 104 Grand Avenue Asbury Park, NJ 07712",
-    Price: 50,
+    Price: 50
     },
     
     {
@@ -34,7 +34,7 @@ const events = [
     Image:" /events_images/80's Night.png",
     Location:"Big Shots Restaurant & Lounge 780 U.S. 1 Woodbridge Township, NJ 08830",
     StartingPrice: 5,
-    EndingPrice: 10,
+    EndingPrice: 10
     },
     
     {
@@ -44,7 +44,7 @@ const events = [
     Image:"/events_images/countryNight.png",
     Location:"Big Shots Restaurant & Lounge 780 U.S. 1 Woodbridge Township, NJ 08830",
     StartingPrice:20,
-    EndingPrice: 50,
+    EndingPrice: 50
     },
     
     {
@@ -53,7 +53,7 @@ const events = [
     Description:"GYPSY faithfully recreates ’Stevie Nicks' live show and the music of Fleetwood Mac with striking accuracy. Diane Lutz gives a stunning performance as Stevie Nicks with spot-on vocals and visuals that magically capture Nicks’ stage presence.psy performs the greatest hits from Stevie Nicks and Fleetwood Mac, including: Stand Back, Rhiannon, Gold Dust Woman, Don’t Stop, Stop Dragging My Heart Around, Silver Springs and so many more! Your audience will be on their feet, singing along to all the hits.", 
     Image:"/events_images/GypsyMusicFestival.png",
     Location:"Rosen Performing Arts Center 1 Pike Drive Wayne, NJ 07470",
-    Price: 40,
+    Price: 40
     },
     
     {
@@ -63,7 +63,7 @@ const events = [
     Image:"/events_images/YogaWithAlpacas.png",
     Location:"Morning Glori Farm 131 Navy Lane Evesham Township, NJ 08053",
     StartingPrice:25,
-    EndingPrice:70,
+    EndingPrice:70
     },
     {
         EventName: "Bayville Fest VII",
@@ -72,7 +72,7 @@ const events = [
         Image: "bayville_Fest.jpeg",
         Location: "B2 Bistro + Bar 125 Bayview Avenue Berkeley Township, NJ 08721",
         StartingPrice: 50,
-        EndingPrice: 100,
+        EndingPrice: 100
     },
     
     {
@@ -91,7 +91,7 @@ const events = [
         Description:"Enjoy an evening of good fun and great drinks with the NBA Nupes! Swing on by and enjoy the party!",
         Image:"klubs_kocktails.jpeg",
         Location:"Topgolf 1013 U.S. 1 Edison, NJ 08817",
-        Price: 70,
+        Price: 70
     },
     
     {
@@ -111,7 +111,7 @@ const events = [
     Image:"/events_images/PBAPlayerChampionship.png",
     Location:"Bowlero North Brunswick 1 Carolier Lane North Brunswick Township, NJ 08902",
     StartingPrice: 20,
-    EndingPrice: 30,
+    EndingPrice: 30
     },
 
     {
@@ -121,7 +121,7 @@ const events = [
         Image: "jerseycity_craft_beer_fest.jpeg",
         Location: "Liberty State Park Ferry Terminal 1 Audrey Zapp Drive Jersey City, NJ 07305",
         StartingPrice: 15,
-        EndingPrice: 60,
+        EndingPrice: 60
     },
 
     {
@@ -130,7 +130,7 @@ const events = [
         Description:"Join Trek Stirling every third Sunday of the month on beginner/intermediate level group road rides around the Great Swamp Wildlife Refuge, a popular area for local riders with scenic farmlands and wildlife all around to appreciate. We appreciate our local riders and want to provide them with a friendly and consistent group ride",
         Image:"great_swamp.jpeg",
         Location:"Trek Bicycle Stirling 393 Main Avenue Long Hill, NJ 07980",
-        Price:"Free",
+        Price:"Free"
         },
     
     {
