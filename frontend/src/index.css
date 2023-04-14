@@ -14,16 +14,13 @@ code {
 
 .title {
 
-  font-family: "Ariel";
+  font-family: "Impact";
   color:#E65100;
   font-size: 30px;
   text-align: left;
   width:40%;
 }
 
-=======
-  color:#E65100
-}
 
 main{
   min-height:80vh;
@@ -42,4 +39,3 @@ main{
 .price{
   font-size: 15px;
 }
->>>>>>> refs/remotes/origin/dev1
