@@ -1,24 +1,10 @@
 
-//import Header from './components/Header';//
-//import { Container } from 'react-bootstrap';//
-import React from 'react';
-
-
-//const App = () => {
-  //return (//
-   // <Header>//
-     //<Container>//
-  
-   // </Container>//
-         // </Header>//
-   //)};//
- 
-
-  
 
 import { Container } from "react-bootstrap";
 import HomeScreen from './screens/HomeScreen';
-import Header from './components/Header'
+import Header from './components/Header';
+import React from 'react';
+import Footer from "./components/Footer";
   function App() {
   return (
     <>
@@ -28,6 +14,7 @@ import Header from './components/Header'
         <HomeScreen/>
       </Container>
     </main>
+    <Footer />
     </>
   );
 }

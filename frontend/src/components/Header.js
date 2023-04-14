@@ -15,7 +15,7 @@ const Header = () => {
               </SearchBar>
             <Button><i class="fa-solid fa-magnifying-glass"></i></Button>
             <Navbar.Brand href="/"></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-na container-fluid"/>
+            <Navbar.Toggle aria-controls="basic-navbar-nav container-fluid"/>
             <Navbar.Collapse id="basic-navbar-nav container-fluid">
                     <Nav className="ms-auto">
                       <Nav.Link href="/cart"><i class="fa-sharp fa-solid fa-cart-shopping"></i> Cart</Nav.Link>  
