@@ -5,8 +5,8 @@ const events = [
     Description:"The Asbury Park Vegan Food Festival is a two-day celebration that features yummy vegan and plant-based meals from local chefs, as well as vegan products, plant-based fashion, live music and good times. All welcome!",
     Image:'/events_images/asburyPark.png',
     Location:"Bradley Park 101-199 5th Ave Asbury Park, NJ 07712",
-    StartingPrice:20,
-    EndingPrice:50
+    StartingPrice: 20,
+    EndingPrice: 50,
     },
     
     {
@@ -15,7 +15,7 @@ const events = [
     Description:"Mayor Raymond A. Giacobbe, the Rahway City Council, and the City of Rahway’s Special Improvement District invite you to get your taste buds ready for our premier Restaurant Tasting Event, happening in Downtown Rahway.", 
     Image:"/events_images/TasteOfSpring.png",
     Location:"Rahway Recreation Center 275 East Milton Avenue Rahway, NJ 07065",
-    Price:35,
+    Price: 35,
     },
     
     {
@@ -33,8 +33,8 @@ const events = [
     Description:"All the greatest hits! Come sing and dance all night to songs of the 80s!",
     Image:" /events_images/80's Night.png",
     Location:"Big Shots Restaurant & Lounge 780 U.S. 1 Woodbridge Township, NJ 08830",
-    StartingPrice:5,
-    EndingPrice:10
+    StartingPrice: 5,
+    EndingPrice: 10,
     },
     
     {
@@ -44,7 +44,7 @@ const events = [
     Image:"/events_images/countryNight.png",
     Location:"Big Shots Restaurant & Lounge 780 U.S. 1 Woodbridge Township, NJ 08830",
     StartingPrice:20,
-    EndingPrice:50
+    EndingPrice: 50,
     },
     
     {
@@ -53,7 +53,7 @@ const events = [
     Description:"GYPSY faithfully recreates ’Stevie Nicks' live show and the music of Fleetwood Mac with striking accuracy. Diane Lutz gives a stunning performance as Stevie Nicks with spot-on vocals and visuals that magically capture Nicks’ stage presence.psy performs the greatest hits from Stevie Nicks and Fleetwood Mac, including: Stand Back, Rhiannon, Gold Dust Woman, Don’t Stop, Stop Dragging My Heart Around, Silver Springs and so many more! Your audience will be on their feet, singing along to all the hits.", 
     Image:"/events_images/GypsyMusicFestival.png",
     Location:"Rosen Performing Arts Center 1 Pike Drive Wayne, NJ 07470",
-    Price:40,
+    Price: 40,
     },
     
     {
@@ -63,7 +63,7 @@ const events = [
     Image:"/events_images/YogaWithAlpacas.png",
     Location:"Morning Glori Farm 131 Navy Lane Evesham Township, NJ 08053",
     StartingPrice:25,
-    EndingPrice:70
+    EndingPrice:70,
     },
     {
         EventName: "Bayville Fest VII",
@@ -71,8 +71,8 @@ const events = [
         Description: "The Bayville Music Festival has been around since 2016, and has grown to become New Jersey’s only Reggae Rock festival. Hosted by NJ’s own native band - Green Knuckle Material, this year’s festival will be one to remember.What started as a DIY backyard show has now evolved into an event you won’t want to miss with the biggest lineup in the Reggae Rock scene yet.Bayville VII will be moving from the backyard to a beautiful local bayside venue called B2 Bistro & Bar. Along with some great music, you’ll also enjoy majestic views of Barnegat Bay, amazing food and drinks, a full service Tiki Bar, and for those that opt for our VIP package - access to a beautiful in-ground pool",
         Image: "bayville_Fest.jpeg",
         Location: "B2 Bistro + Bar 125 Bayview Avenue Berkeley Township, NJ 08721",
-        StartingPrice: $50,
-        EndingPrice: $100
+        StartingPrice: 50,
+        EndingPrice: 100,
     },
     
     {
@@ -81,8 +81,8 @@ const events = [
         Description:"Emo rock music covers of bands such as Taking Back Sunday, Fall Out Boy, Paramore, Jimmy Eat World, My Chemical Romance, The Used, & MANY MORE!Wear your favorite band Tee, or come as yourself!",
         Image:"emo_night.jpeg",
         Location:"Big Shots Restaurant & Lounge 780 U.S. 1 Woodbridge Township, NJ 08830",
-        StartingPrice: $5,
-        EndingPrice: $20
+        StartingPrice: 5,
+        EndingPrice: 20
     },
     
     {
@@ -91,7 +91,7 @@ const events = [
         Description:"Enjoy an evening of good fun and great drinks with the NBA Nupes! Swing on by and enjoy the party!",
         Image:"klubs_kocktails.jpeg",
         Location:"Topgolf 1013 U.S. 1 Edison, NJ 08817",
-        Price: $70,
+        Price: 70,
     },
     
     {
@@ -100,7 +100,7 @@ const events = [
         Description: "New Jersey’s Hottest New Wrestling Convention",
         Image:"wrestle_show.jpeg",
         Location: "Middletown Sports Complex 214 Harmony Road Middletown Township, NJ 07748",
-        Price: $15,
+        Price: 15,
     },
     
     
@@ -110,8 +110,8 @@ const events = [
     Description: "The PBA Players Championship may just be the most anticipated event of the year for the athletes and fans — as it marks the PBA’s long-awaited homecoming to Bowlero North Brunswick. The final major champion of 2023 will have to emerge from the 12-player bracket finals, airing in entirety on FS1 and FOX.",
     Image:"/events_images/PBAPlayerChampionship.png",
     Location:"Bowlero North Brunswick 1 Carolier Lane North Brunswick Township, NJ 08902",
-    StartingPrice:20,
-    EndingPrice:30
+    StartingPrice: 20,
+    EndingPrice: 30,
     },
 
     {
@@ -120,8 +120,8 @@ const events = [
         Description: "The Ferry terminal at Liberty State Park will be hosting an eclectic local variety of superbly fermented beer and cider in all styles combining the best elements of a Beer Garden with the staggering array of choices found only at a Craft Beer Festival. Guests will enjoy craft beer samples for the entire evening paired with live entertainment, Food and Interactive Games",
         Image: "jerseycity_craft_beer_fest.jpeg",
         Location: "Liberty State Park Ferry Terminal 1 Audrey Zapp Drive Jersey City, NJ 07305",
-        StartingPrice: $15,
-        EndingPrice: $60
+        StartingPrice: 15,
+        EndingPrice: 60,
     },
 
     {
@@ -139,8 +139,8 @@ const events = [
         Description: "Midnight Market is an exciting take on the classic night market scene. We are excited to return to Jersey City at a new venue in the Mural Arts District",
         Image:"MidnightMarket.jpeg",
         Location: "MAD JC 227 Coles Street Jersey City, NJ 07310",
-        StartingPrice: $10,
-        EndingPrice: $25
+        StartingPrice: 10,
+        EndingPrice: 25
     },
     ]
 
