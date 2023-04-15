@@ -1,21 +1,41 @@
 import { Container } from "react-bootstrap";
 import HomeScreen from './screens/HomeScreen';
-import Header from './components/Header'
+import Header from './components/Header';
 import Footer from "./components/Footer";
+import React from "react";
 
-    function App() {
-      return (
-        <>
-        <Header />
-        <main>
-          <Container>
-        <h3>Check Out These Trending Categories!</h3>
-          </Container>
-          <HomeScreen />
+//function App() {//
+function clickMe(){
+  alert('You clicked me!');
+}
+
+export default function App () {
+    return ( 
+
+
+      <>
+      <Header />
+      <main>
+      <Container>
+      <h3>Check Out These Trending Categories!</h3>
+      <button onClick={clickMe}>
+  Music
+</button>
+
+<button onClick={clickMe}>
+  Sports&Fitness
+</button>
+
+<button onClick={clickMe}>
+ Food&Drink
+</button>
+        </Container>
+        <HomeScreen />
         </main>
         <Footer />
-        </>
-      );
-    }
-    export default App;
+      </>
+      )
+      }
+
+    
     
