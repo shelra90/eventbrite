@@ -1,4 +1,4 @@
-/*  ignore */
+
 import React from 'react'
 
 const SearchBar = ({placeholder, data}) => {

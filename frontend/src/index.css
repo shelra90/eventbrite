@@ -12,9 +12,31 @@ code {
     monospace;
 }
 
+
 .title {
-  color:#E65100
+
+  font-family: "Impact";
+  color:#E65100;
+  font-size: 65px;
+  text-align: left;
+  width:38%;
 }
+
+
+.SearchBar {
+  width: 250%;
+  height: 70%;
+  padding:80px;
+  border-radius: 200px;
+}
+
+  .search {
+      width: 40%;
+      height: 70%;
+      padding:30px;
+      border-width:40px;
+      margin-right:-2.3%;
+  }
 
 
 
