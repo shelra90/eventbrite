@@ -18,15 +18,18 @@ export default function App () {
       <main>
       <Container>
       <h3>Check Out These Trending Categories!</h3>
-      <button onClick={clickMe}>
-  Music
-</button>
+    
+      <button class= "M" onClick={clickMe}>
+      Music
+      </button>
+    
 
-<button onClick={clickMe}>
+  
+<button class= "S" onClick={clickMe}>
   Sports&Fitness
 </button>
 
-<button onClick={clickMe}>
+<button class="F" onClick={clickMe}>
  Food&Drink
 </button>
         </Container>
