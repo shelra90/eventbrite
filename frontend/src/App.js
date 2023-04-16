@@ -8,11 +8,9 @@ import React from "react";
 function clickMe(){
   alert('You clicked me!');
 }
-
-export default function App () {
-    return ( 
-
-
+function App () {
+    
+  return ( 
       <>
       <Header />
       <main>
@@ -20,25 +18,26 @@ export default function App () {
       <h3>Check Out These Trending Categories!</h3>
     
       <button class= "M" onClick={clickMe}>
-      Music
+            Music
       </button>
     
+      <button class= "S" onClick={clickMe}>
+            Sports&Fitness
+      </button>
 
-  
-<button class= "S" onClick={clickMe}>
-  Sports&Fitness
-</button>
-
-<button class="F" onClick={clickMe}>
- Food&Drink
-</button>
+      <button class="F" onClick={clickMe}>
+            Food&Drink      
+      </button>
+   
         </Container>
         <HomeScreen />
         </main>
         <Footer />
       </>
+
       )
+
       }
 
     
-    
+      export default App;

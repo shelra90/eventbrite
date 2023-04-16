@@ -64,6 +64,8 @@ code {
 
 
     .S {
+  position: absolute;
+  right: 40%;
   font-weight: 900;
   background-color:  #fee6e3;
   border: 2px solid #1A1A1A;
@@ -80,6 +82,8 @@ code {
     }
 
     .F {
+      position: absolute;
+      right: 5%;
     font-weight: 900;
      background-color: #fee6e3;
       border: 2px solid #1A1A1A;

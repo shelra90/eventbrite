@@ -11,5 +11,7 @@ const Category = ({cat}) => {
     </div>
     )
   }
+
+
      export default Category
   

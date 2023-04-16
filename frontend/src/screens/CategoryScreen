@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 import { Col , Row } from 'react-bootstrap'
 
@@ -5,16 +7,12 @@ import { Col , Row } from 'react-bootstrap'
 const CategoryScreen = () => {
  return (
    <>
-   <h3>Check Out These Trending Categories!</h3>
-   <Row>  
-{category.map((cat) => (
-<Col sm={12} md={6} lg={4} xl={3}>
- <Category category={cat}/>
-  </Col>
- ))}  
-</Row>
-</>
-)
-}
-export default CategoryScreen
 
+<Row>
+{button.map((events) => (
+<Col sm={12} md={6} lg={4} x1={3}>
+<button  ={events} />
+</Col>
+))}
+</Row>
+export default CategoryScreen
