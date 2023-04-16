@@ -5,13 +5,24 @@ import Footer from "./components/Footer";
 import React from "react";
 
 
-//function App() {//
+
 function clickMe(){
   alert('You clicked me!');
 }
+// const Category = ({cat}) => ['Music', 'Sports&Fitness', 'Food&Drink']
+
+// // return (
+//   <div className='CategoryName'>
+//     {
+// button.Category.map((cat, index) => <div className='CategoryName'>key={}{cat}</div>)
+// }
+
+// </div>
+// // );
+
+
 function App () {
-
-
+  // const Category = ({cat}) => ['Music', 'Sports&Fitness', 'Food&Drink']
   return ( 
       <>
       <Header />
@@ -30,15 +41,34 @@ function App () {
       <button class="F" onClick={clickMe}>
             Food&Drink      
       </button>
-   
-        </Container>
+    
+
+</Container>
         <HomeScreen />
         </main>
         <Footer />
       </>
-  )
+  );
+}
+  
 
-      }
-
-    
+//   return () {
+//       this.state = [
+//       { cat: "Music" },
+//       { cat: "Sports&Fitness" },
+//       { cat: "Food&Drink" },
+//   ];
+// }
+//   return (
+//     <div>
+//     {this.state.map((cat) = {
+//         return (
+//       <div>
+//        <h1>{cat.index}</h1>
+//       </div>
+//   );
+//   })}
+//  </div>
+// );
+  
       export default App;
