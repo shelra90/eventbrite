@@ -4,12 +4,14 @@ import Header from './components/Header';
 import Footer from "./components/Footer";
 import React from "react";
 
+
 //function App() {//
 function clickMe(){
   alert('You clicked me!');
 }
 function App () {
-    
+
+
   return ( 
       <>
       <Header />
@@ -34,8 +36,7 @@ function App () {
         </main>
         <Footer />
       </>
-
-      )
+  )
 
       }
 

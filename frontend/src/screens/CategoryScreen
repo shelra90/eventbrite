@@ -1,18 +1,18 @@
 
 
-import React from 'react'
-import { Col , Row } from 'react-bootstrap'
+// import React from 'react'
+// import { Col , Row } from 'react-bootstrap'
 
 
-const CategoryScreen = () => {
- return (
-   <>
+// const CategoryScreen = () => {
+//  return (
+//    <>
 
-<Row>
-{button.map((events) => (
-<Col sm={12} md={6} lg={4} x1={3}>
-<button  ={events} />
-</Col>
-))}
-</Row>
-export default CategoryScreen
+// <Row>
+// {button.map((events) => (
+// <Col sm={12} md={6} lg={4} x1={3}>
+// <button  ={events} />
+// </Col>
+// ))}
+// </Row>
+// export default CategoryScreen

@@ -41,8 +41,9 @@ code {
       color: "black";
       font-size: 30px;
       font-weight: 900;
-      text-align: left;
+      text-align: center;
       width:40%;
+      position: center;
     }
 
     .M {
