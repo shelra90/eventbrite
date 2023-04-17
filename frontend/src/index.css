@@ -16,6 +16,8 @@ code {
   color:#E65100
 }
 
+
+
 main{
   min-height:80vh;
 }
@@ -122,3 +124,7 @@ main{
   border-radius:5px 0px 0px 5px ;
   border: 1px solid black;
 }
+.Footer{
+  font-size: 10px;
+}
+

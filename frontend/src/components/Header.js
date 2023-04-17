@@ -12,8 +12,8 @@ const Header = () => {
             <SearchBar  placeholder="Search Events..."> </SearchBar>
             
             <Navbar.Brand href="/"></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar.Toggle aria-controls="basic-navbar-nav container-fluid" />
+            <Navbar.Collapse id="basic-navbar-nav container-fluid">
                     <Nav className="ms-auto">
                       <Nav.Link href="/"><i class="fa fa-plus" aria-hidden="true"></i> Create Event </Nav.Link>    
                       <Nav.Link href="/cart"><i className="fa-sharp fa-solid fa-cart-shopping"></i> Cart </Nav.Link>  
