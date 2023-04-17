@@ -108,3 +108,17 @@ main{
 .catButton{
   margin-right: 28px;
 }
+.searchIcon{
+  height: 35px;
+  margin-bottom: 5px;
+  margin-left: -22px;
+  border-radius: 0px 5px 5px 0px;
+
+}
+.searchInputs{
+  margin-left: 32px;
+  width: 305px;
+  height: 35px;
+  border-radius:5px 0px 0px 5px ;
+  border: 1px solid black;
+}

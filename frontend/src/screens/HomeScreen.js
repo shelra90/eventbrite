@@ -14,15 +14,22 @@ const HomeScreen=()=>{
             <h3>CheckOut your favourite Categories</h3>
 
             <Button onClick={()=>setCategory('Music')} className='catButton'>Music</Button>
-            <Button onClick={()=>setCategory('Sports & Fitness')} className='catButton'>Sports & Fitness</Button>
-            <Button onClick={()=>setCategory('Food & Drinks')} className='catButton'>Food & Drinks</Button>
+            <Button onClick={()=>setCategory('Sports&Fitness')} className='catButton'>Sports & Fitness</Button>
+            <Button onClick={()=>setCategory('Food&Drink')} className='catButton'>Food & Drinks</Button>
+            <Button onClick={()=>setCategory('')} className='catButton'>All</Button>
           </div>
             <Row>
-              {events.map((eve) => (
-                <Col sm={12} md={6} lg={4} xl={3}>
+              {category===''? events.map((eve) => (
+                <Col key={eve.Id} sm={12} md={6} lg={4} xl={3}>
+                  <EventCard  eve={eve}/>
+                </Col>
+                )): events.filter(event=> event.CategoryName===category).map((eve)=>(
+                  <Col key={eve.Id} sm={12} md={6} lg={4} xl={3}>
                   <EventCard eve={eve}/>
                 </Col>
-                ))}
+                ))
+                }
+              
                 
             </Row>
         </>

@@ -36,8 +36,8 @@ const EventCard = ({eve}) => {
           <Card.Text as='div' className='price'>
              {priceTag}
           </Card.Text>
-          <div class="button">
-            <a href="#" class="btn btn-primary">{buttonName}</a>
+          <div className="button">
+            <a href="#" className="btn btn-primary">{buttonName}</a>
           </div>
           
         </Card.Body>

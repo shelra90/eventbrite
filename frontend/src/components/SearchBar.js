@@ -1,16 +1,13 @@
 /*  ignore */
 import React from 'react'
-
+import { Button } from 'react-bootstrap'
 const SearchBar = ({placeholder, data}) => {
   return (
     <div className="search">
-  <div className="searchInputs">
-      <div className="dataResult">
-        <input type="text" placeholder={placeholder}/>
-           <div className="searchIcon">
-            </div>
-        </div> 
-    </div>
+
+        <input type="text" placeholder={placeholder} className="searchInputs"/>
+        <Button className='searchIcon'><i className="fa-solid fa-magnifying-glass"></i></Button>
+        
     </div> 
 
   )
