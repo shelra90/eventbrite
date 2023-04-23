@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import {Row,Col} from "react-bootstrap";
 import EventCard from '../components/EventCard';
-import events from '../events';
+import axios from 'axios';
 import {Button} from 'react-bootstrap';
 
 const HomeScreen=()=>{
+
+
   const [category, setCategory] = useState('');
-    console.log(category);
+  useEffect(()=>{
+    const fetchEvents=()=>{
+      const {data}=axios.get('/api/events');
+    }
+  })
+    
     return(
 
         <>
@@ -19,6 +26,7 @@ const HomeScreen=()=>{
             <Button onClick={()=>setCategory('')} className='catButton'>All</Button>
           </div>
             <Row>
+
               {category===''? events.map((eve) => (
                 <Col key={eve.Id} sm={12} md={6} lg={4} xl={3}>
                   <EventCard  eve={eve}/>
@@ -29,7 +37,6 @@ const HomeScreen=()=>{
                 </Col>
                 ))
                 }
-              
                 
             </Row>
         </>
