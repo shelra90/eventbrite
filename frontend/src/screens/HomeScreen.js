@@ -9,8 +9,8 @@ const HomeScreen=()=>{
 
   const [category, setCategory] = useState('');
   useEffect(()=>{
-    const fetchEvents=()=>{
-      const {data}=axios.get('/api/events');
+    const fetchEvents=  ()=>{
+      const {data}=  axios.get('/api/events');
     }
   })
     
