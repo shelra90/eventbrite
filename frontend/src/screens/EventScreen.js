@@ -3,9 +3,9 @@ import {Row,Col,Image,Card,Button,ListGroup, ListGroupItem} from 'react-bootstra
 
 
 const EventScreen = props => {
- console.log(props);
+ 
  const priceLabel=props.eve.Price!==undefined? "Price:": "Starts from ";
- const price = props.eve.Price!==undefined? props.eve.Price : props.eve.StartingPrice
+ const price = props.eve.Price!==undefined? props.eve.Price : props.eve.StartingPrice;
   
   return (
     <div className="popup-box">
