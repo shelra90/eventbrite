@@ -1,6 +1,5 @@
 const events = [
         {
-        Id :1,
         CategoryName:"Food&Drink",
         EventName:"2023 Asbury Park Vegan Food Festival",
         Date:"May 20, 2023;11am-5pm EDT",
@@ -12,7 +11,6 @@ const events = [
         },
         
         {
-        Id :2,
         CategoryName:"Food&Drink",
         EventName:"2023 Taste of Spring",
         Date:"Friday, April 14 · 5:30 - 9pm EDT",
@@ -23,7 +21,6 @@ const events = [
         },
         
     {
-        Id :3,
         CategoryName:"Food&Drink",
         EventName:"Jersey City Craft Beer Fest",
         Date: "Friday, May 5 6:30 - 10pm EDT",
@@ -35,7 +32,6 @@ const events = [
     },
     
     {
-        Id :4,
         CategoryName:"Food&Drink",
         EventName: "Midnight Market",
         Date: "Friday, May 5 · 6:30 - 11:59pm EDT",
@@ -47,7 +43,6 @@ const events = [
     },
     
         {
-        Id :5,
         CategoryName:"Food&Drink",
         EventName:"Asbury Park Restaurant Tour",
         Date:"Sunday, April 23, 2023; 12-4pm EDT",
@@ -58,7 +53,6 @@ const events = [
         },
         
         {
-        Id :6,
         CategoryName: "Music",
         EventName:"Live Band 80's Night",
         Date:"April 29 · 7pm - April 30 · 12am EDT",
@@ -70,7 +64,6 @@ const events = [
         },
         
     {
-        Id :7,
         CategoryName: "Music",
         EventName: "Bayville Fest VII",
         Date: "Starts on Saturday, June 24 · 12pm EDT",
@@ -82,7 +75,6 @@ const events = [
     },
     
     {
-        Id :8,
         CategoryName: "Music",
         EventName: "Live Band EMO Night w/ Feeling Emo",
         Date: "April 22 · 7pm - April 23 · 1am EDT",
@@ -94,7 +86,6 @@ const events = [
     },
     
     {
-        Id :9,
         CategoryName: "Music",
         EventName:"Klubs and Kocktails with the NBA Nupes",
         Date:"Sunday, April 16 · 5 - 8pm EDT",
@@ -105,7 +96,6 @@ const events = [
     },
     
     {
-        Id :10,
         CategoryName: "Music",
         EventName: "WrestleShow NJ",
         Date:"Saturday, May 20 · 10am - 4pm EDT",
@@ -117,7 +107,6 @@ const events = [
     
         
         {
-        Id :11,
         CategoryName: "Music",
         EventName:"Country Night - Live DJ & Line Dance Instructor",
         Date:"April 21 · 8pm - April 22 · 2am EDT",
@@ -129,7 +118,6 @@ const events = [
         },
         
         {
-        Id :12,
         CategoryName: "Music",
         EventName:"Gypsy: A Celebration of the music of Stevie Nicks and Fleetwood Mac",
         Date:"Saturday, April 22 · 8 - 11pm EDT",
@@ -140,7 +128,6 @@ const events = [
         },
         
         {
-        Id :13,
         CategoryName:"Sports&Fitness",
         EventName:"Yoga with Alpacas",
         Date:"Thursday, May 18 · 6:30 - 7:30pm EDT",
@@ -153,7 +140,6 @@ const events = [
         
         
         {
-        Id :14,
         CategoryName:"Sports&Fitness",
         EventName:"2023 PBA Players Championship presented by Snickers Finals",
         Date:"Sunday, May 14 · 1 - 3pm EDT",
@@ -165,7 +151,6 @@ const events = [
         },
        
         {
-        Id :15,
         CategoryName:"Sports&Fitness",
         EventName: "Great Swamp Sundays Group Bike Ride",
         Date: "April 16 Sun, 9:00 AM - 12:00 PM EDT ",
