@@ -7,7 +7,9 @@ app.get('/api/events',(req,res)=>{
 })
 
 app.get('/api/event/:id',(req,res)=>{
+
     const event=events.find(e=>e.Id==req.params.id);
+    console.log(event)
     res.json(event)
 })
 
