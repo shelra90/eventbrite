@@ -22,6 +22,11 @@ app.use('/api/events', eventRoutes)
 // })
 
 
+//app.get('/api/event/:id',(req,res)=>{
 
+  //  const event=events.find(e=>e.Id==req.params.id);
+   // console.log(event)
+   // res.json(event)
+//})
 
 app.listen(5467,console.log('server is running on port 5467'))
