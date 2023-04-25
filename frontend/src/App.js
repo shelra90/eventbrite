@@ -2,16 +2,24 @@ import { Container } from "react-bootstrap";
 import HomeScreen from './screens/HomeScreen';
 import Header from './components/Header'
 import Footer from "./components/Footer";
+import CreateEvent from './components/CreateEvent';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
   function App() {
   return (
     <>
+    <Router>
     <Header />
     <main>
       <Container>
-        <HomeScreen/>
+        <Routes>
+            <Route path='/' element={<HomeScreen />} exact />
+            <Route path='/createevent' element={<CreateEvent/>} />
+          </Routes>
       </Container>
     </main>
     <Footer />
+    </Router>
+    
     </>
   );
 }
