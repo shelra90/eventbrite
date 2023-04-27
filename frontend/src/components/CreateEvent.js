@@ -11,14 +11,6 @@ const [startingPrice, setStartingPrice] = useState();
 const [endingPrice, setEndingPrice] = useState();
 const [price, setPrice] = useState();
 
-// CategoryName:"Food&Drink",
-// EventName:"2023 Asbury Park Vegan Food Festival",
-// Date:"May 20, 2023;11am-5pm EDT",
-// Description:"The Asbury Park Vegan Food Festival is a two-day celebration that features yummy vegan and plant-based meals from local chefs, as well as vegan products, plant-based fashion, live music and good times. All welcome!",
-// Image:'/events_images/asburyPark.png',
-// Location:"Bradley Park 101-199 5th Ave Asbury Park, NJ 07712",
-// StartingPrice:20,
-// EndingPrice:50
 
 // States for checking the errors
 const [submitted, setSubmitted] = useState(false);

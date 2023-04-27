@@ -9,8 +9,8 @@ const EventScreen = props => {
   const [event,setEvent]=useState({})
   useEffect(()=>{
     const fetchEvent=async()=>{
-        const {data}=await axios.get(`/api/event/${props.id}`)
-        console.log(data);
+        const {data}=await axios.get(`/api/events/${props.id}`)
+        
         setEvent(data);
     }
     fetchEvent();
@@ -33,7 +33,7 @@ const EventScreen = props => {
                     <ListGroupItem>
                         <h3>{event.EventName}</h3>
                     </ListGroupItem>
-                    <ListGroupItem className='popup'><span className='popupheadings'> {priceLabel} </span><strong>${price}</strong></ListGroupItem>
+                    <ListGroupItem className='popup'><span className='popupheadings'> {priceLabel} </span><strong> ${price}</strong></ListGroupItem>
                     <ListGroupItem className='popup'><span className='popupheadings'>Location:</span> {event.Location}</ListGroupItem>
                     <ListGroupItem className='popup'><span className='popupheadings'>Date&Time:</span> {event.Date}</ListGroupItem>
                 </ListGroup>

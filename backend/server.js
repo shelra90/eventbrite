@@ -1,10 +1,13 @@
-const express=require('express');
+import express from 'express';
 import dotenv from 'dotenv'
 // const events=require('./data/events');
 import eventRoutes from './routes/eventRoutes.js'
 import connectDB from './config/db.js';
 
 const app=express();
+// Add this line
+app.use(express.json());
+
 dotenv.config()
 connectDB()
 
