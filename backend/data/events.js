@@ -1,7 +1,7 @@
 const events = [
         {
         CategoryName:"Food&Drink",
-        EventName:"2023 Asbury Park Vegan Food Festival",
+        EventName:"2026 Asbury Park Vegan Food Festival",
         Date:"May 20, 2023;11am-5pm EDT",
         Description:"The Asbury Park Vegan Food Festival is a two-day celebration that features yummy vegan and plant-based meals from local chefs, as well as vegan products, plant-based fashion, live music and good times. All welcome!",
         Image:'/events_images/asburyPark.png',
@@ -57,7 +57,7 @@ const events = [
         EventName:"Live Band 80's Night",
         Date:"April 29 · 7pm - April 30 · 12am EDT",
         Description:"All the greatest hits! Come sing and dance all night to songs of the 80s!",
-        Image:"/events_images/80's Night.png",
+        Image:"/events_images/80sNight.png",
         Location:"Big Shots Restaurant & Lounge 780 U.S. 1 Woodbridge Township, NJ 08830",
         StartingPrice: 5,
         EndingPrice: 10
@@ -157,9 +157,9 @@ const events = [
         Description:"Join Trek Stirling every third Sunday of the month on beginner/intermediate level group road rides around the Great Swamp Wildlife Refuge, a popular area for local riders with scenic farmlands and wildlife all around to appreciate. We appreciate our local riders and want to provide them with a friendly and consistent group ride",
         Image:"/events_images/great_swamp.png",
         Location:"Trek Bicycle Stirling 393 Main Avenue Long Hill, NJ 07980",
-        Price:"Free",
-        },
+        Price:10,
+        }
         ]
     
-        module.exports = events
+        export default events
         

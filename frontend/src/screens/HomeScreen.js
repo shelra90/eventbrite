@@ -12,6 +12,7 @@ const HomeScreen=()=>{
   useEffect(()=>{
     const fetchEvents=async()=>{
       const {data}= await axios.get('/api/events');
+      console.log(data);
       setEvents(data);
     }
     fetchEvents()
