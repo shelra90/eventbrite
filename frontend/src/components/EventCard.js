@@ -43,7 +43,7 @@ const EventCard = ({eve}) => {
         </Card.Body>
       </Card>
       {isOpen && <EventScreen
-      eve={eve}
+      id={eve._id}
       handleClose={togglePopup}
       priceTag={priceTag}
     />}

@@ -8,10 +8,14 @@ const HomeScreen=()=>{
 
 
   const [category, setCategory] = useState('');
+  const [events,setEvents]=useState([]);
   useEffect(()=>{
-    const fetchEvents=()=>{
-      const {data}=axios.get('/api/events');
+    const fetchEvents=async()=>{
+      const {data}= await axios.get('/api/events');
+      console.log(data);
+      setEvents(data);
     }
+    fetchEvents()
   })
     
     return(
