@@ -8,7 +8,7 @@ const eventSchema = mongoose.Schema({
         required: true
     },
 
-    Categoryname:{
+    CategoryName:{
         type: String,
         required: true     
     },
@@ -40,13 +40,22 @@ const eventSchema = mongoose.Schema({
 
     Price: {
         type: Number,
-        required: true,
-        default: 0
+        
+    },
+
+    StartingPrice:{
+        type: Number
+    },
+
+    EndingPrice:{
+        type: Number   
     }
+
+
 
     }, {
         timestamps: true
 })
 
-const event = mongoose.model('events', eventSchema)
-export default event
+const Event = mongoose.model('events', eventSchema)
+export default Event
