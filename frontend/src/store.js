@@ -7,7 +7,7 @@ const rootReducer = combineReducers({
 })
 
 const store = configureStore({
-    reducer: {},
+    reducer: {rootReducer},
     preloadedState: {},
     
 })

@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState} from 'react';
 import { useDispatch, useSelector} from 'react-redux'
 import {Row,Col} from "react-bootstrap";
 import EventCard from '../components/EventCard';
 import { listEvents } from '../actions/eventActions';
 import {Button} from 'react-bootstrap';
 import Loader from '../components/Loader';
+import Message from '../components/Message'
 
 const HomeScreen=()=>{
+  const [category, setCategory] = useState('');
+  // const [events,setEvents]=useState([]);
+
 
   const dispatch = useDispatch()
   const eventList = useSelector((state) => state.eventList)
