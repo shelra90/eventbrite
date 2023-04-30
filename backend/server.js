@@ -14,6 +14,9 @@ connectDB()
 
 app.use('/api/events', eventRoutes)
 
+app.use(errorHandler)
+
+app.listen(5467,console.log('server is running on port 5467'))
 
 // app.get('/api/events',(req,res)=>{
 //     res.json(events)
@@ -32,4 +35,3 @@ app.use('/api/events', eventRoutes)
    // res.json(event)
 //})
 
-app.listen(5467,console.log('server is running on port 5467'))
