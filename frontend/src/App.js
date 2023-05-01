@@ -13,7 +13,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
       <Container>
         <Routes>
             <Route path='/' element={<HomeScreen />} exact />
-            <Route path='/CreateEvent' element={<CreateEvent/>} />
+            <Route path='/CreateEvent' element={<CreateEvent />} />
           </Routes>
       </Container>
     </main>
