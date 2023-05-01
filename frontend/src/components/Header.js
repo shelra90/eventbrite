@@ -16,8 +16,9 @@ const Header = () => {
               <Navbar.Toggle aria-controls="basic-navbar-nav container-fluid" />
               <Navbar.Collapse id="basic-navbar-nav container-fluid">
                   <Nav className="ms-auto">
-                    {/* <Nav.Link href="/createevent"><i className="fa fa-plus" aria-hidden="true"></i> Create Event </Nav.Link>     */}
-                    <Nav.Link href="/"><i className="fa fa-plus" aria-hidden="true"></i> Create Event </Nav.Link>    
+                    <Nav.Link href="/"> Home </Nav.Link>
+                    <Nav.Link href="/CreateEvent"><i className="fa fa-plus" aria-hidden="true"></i> Create Event </Nav.Link>    
+                    {/* <Nav.Link href="/"><i className="fa fa-plus" aria-hidden="true"></i> Create Event </Nav.Link>     */}
                     <Nav.Link href="/cart"><i className="fa-sharp fa-solid fa-cart-shopping"></i> Cart </Nav.Link>  
                     <Nav.Link href="/login"><i className='fas fa-user'></i> Sign In</Nav.Link>
                   </Nav>
