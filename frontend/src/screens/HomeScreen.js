@@ -14,19 +14,23 @@ const HomeScreen=()=>{
 
   const dispatch = useDispatch()
   const eventList = useSelector((state) => state.eventList)
-  const {loading, error, events} = eventList
+  const {loading, error, events} = eventList || {loading: false, error: "", events:[]}
 
 
-  useEffect(()=>{
-    dispatch(listEvents())
+    useEffect(()=>{
+      dispatch(listEvents())
 
-  })
+    },[dispatch])
    
     return(
 
         <>
           <div className='categories'>
             <h3>CheckOut your favourite Categories</h3>
+            <Button onClick={()=>setCategory('Music')} className='catButton'>Music</Button>
+            <Button onClick={()=>setCategory('Sports&Fitness')} className='catButton'>Sports & Fitness</Button>
+            <Button onClick={()=>setCategory('Food&Drink')} className='catButton'>Food & Drinks</Button>
+            <Button onClick={()=>setCategory('')} className='catButton'>All</Button>
             {loading ? (<Loader />)
                : error? (
                 <Message variant='danger'>{error}</Message>
@@ -46,11 +50,6 @@ const HomeScreen=()=>{
                   
               </Row>)
             }
-
-            <Button onClick={()=>setCategory('Music')} className='catButton'>Music</Button>
-            <Button onClick={()=>setCategory('Sports&Fitness')} className='catButton'>Sports & Fitness</Button>
-            <Button onClick={()=>setCategory('Food&Drink')} className='catButton'>Food & Drinks</Button>
-            <Button onClick={()=>setCategory('')} className='catButton'>All</Button>
           </div>
            
         </>
