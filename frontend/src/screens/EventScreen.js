@@ -9,7 +9,8 @@ const EventScreen = props => {
 
 //  const priceLabel=props.eve.Price!==undefined? "Price:": "Starts from ";
 //  const price = props.eve.Price!==undefined? props.eve.Price : props.eve.StartingPrice;
-  const [event,setEvent]=useState({})
+  const [event,setEvent]=useState({});
+  const [qty, setQty] =useState(1)
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -30,7 +31,7 @@ const EventScreen = props => {
   const price = event.Price!==undefined? event.Price : event.StartingPrice;
 
   const addToCartHandler = () => {
-    navigate('/cart/${params.id}')
+    navigate(`/cart/${params.id}?qty=${qty}`)
   }
   return (
     <div className="popup-box">
