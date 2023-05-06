@@ -1,5 +1,6 @@
 import express from 'express';
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
+import errorHandler from './middleware/errorMiddleware.js';
 // const events=require('./data/events');
 import eventRoutes from './routes/eventRoutes.js'
 import connectDB from './config/db.js';
@@ -14,6 +15,9 @@ connectDB()
 
 app.use('/api/events', eventRoutes)
 
+app.use(errorHandler)
+
+app.listen(5467,console.log('server is running on port 5467'))
 
 // app.get('/api/events',(req,res)=>{
 //     res.json(events)
@@ -32,4 +36,3 @@ app.use('/api/events', eventRoutes)
    // res.json(event)
 //})
 
-app.listen(5467,console.log('server is running on port 5467'))

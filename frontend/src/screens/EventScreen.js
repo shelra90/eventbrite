@@ -1,12 +1,20 @@
 import React,{useState,useEffect} from 'react'
+import { useDispatch, useSelector} from 'react-redux'
 import {Row,Col,Image,Card,Button,ListGroup, ListGroupItem} from 'react-bootstrap';
 import axios from 'axios';
+
+
 
 const EventScreen = props => {
 
 //  const priceLabel=props.eve.Price!==undefined? "Price:": "Starts from ";
 //  const price = props.eve.Price!==undefined? props.eve.Price : props.eve.StartingPrice;
   const [event,setEvent]=useState({})
+  const dispatch = useDispatch()
+
+  const eventDetails = useSelector((state) => state.eventDetails) 
+
+
   useEffect(()=>{
     const fetchEvent=async()=>{
         const {data}=await axios.get(`/api/events/${props.id}`)
