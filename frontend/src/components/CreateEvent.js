@@ -6,12 +6,12 @@ const CreateEvent=()=> {
 const [eventName, setEventName] = useState('');
 const [categoryName, setCategoryName] = useState('Music');
 const [description, setDescription] = useState('');
-const [image, setImage] = useState('');
 const [location, setLocation] = useState('');
 const [startingPrice, setStartingPrice] = useState();
 const [endingPrice, setEndingPrice] = useState();
 const [price, setPrice] = useState();
 const [date, setDate] = useState('');
+const [image, setImage] = useState(null);
 const dateInputRef = useRef(null);
 
 
@@ -68,6 +68,11 @@ setPrice(e.target.value);
 setSubmitted(false);
 };
 
+//Handling the image upload change
+const handleImageUpload = (e) =>{
+    setImage(e.target.files[0]);
+}
+
 // Handling the form submission
 const handleSubmit = (e) => {
 e.preventDefault();
@@ -85,14 +90,15 @@ const newEvent={
     Price:price, 
     Date:date
 }
-const putEvents=async()=>{
+console.log(newEvent);
+const postEvents=async()=>{
+    const formData=axios.toFormData(newEvent);
+    const data= await axios.post('/api/events/create',formData);
 
-    const data= await axios.put('/api/events/create',newEvent);
-
-    console.log(data);
+    console.log(formData);
     
 }
-putEvents()
+postEvents()
 setSubmitted(true);
 setError(false);
 }
@@ -100,28 +106,20 @@ setError(false);
 
 // Showing success message
 const successMessage = () => {
-return (
-<div
-className="success"
-style={{
-display: submitted ? '' : 'none',
-}}>
-<h1>New Event created Successfully!!</h1>
-</div>
-);
+    return (
+        <div className="success" style={{display: submitted ? '' : 'none' }}>
+            <h1>New Event created Successfully!!</h1>
+        </div>
+    );
 };
 
 // Showing error message if error is true
 const errorMessage = () => {
-return (
-<div
-className="error"
-style={{
-display: error ? '' : 'none',
-}}>
-<h1>Please enter all the fields</h1>
-</div>
-);
+    return (
+        <div className="error" style={{display: error ? '' : 'none'}}>
+            <h1>Please enter all the fields</h1>
+        </div>
+    );
 };
 
 return (
@@ -171,6 +169,11 @@ value={endingPrice} type="text" />
 <label className="label">Price</label>
 <input onChange={handlePrice} className="input"
 value={price} type="text" />
+<br/>
+
+<label className="label">Upload Image</label>
+<input type='file' onChange={handleImageUpload} className="input"
+/>
 <br/>
 
 <button onClick={handleSubmit} className="btn" type="submit">
