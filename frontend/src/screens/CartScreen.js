@@ -21,35 +21,36 @@ const CartScreen = () => {
     
 
     useEffect(() => {
-        if (productId) {
-            dispatch(addToCart(productId, qty))
+        if (eventId) {
+            dispatch(addToCart(eventId, qty))
         }
-    }, [dispatch, productId, qty])
-    
+
+    }, [dispatch, eventId, qty])
+    }
+
+
 
     const removeFromCartHandler =(id) => {
         dispatch(removeFromCart(id))
     }
-    const checkoutHandler = () => {
-        navigate('/login?redirect=shipping')
-    }
+   
   return (
     <Row>
         <Col md={8}>
             <h1>Shopping Cart</h1>
-            {cartItems.length === 0? (
+            {cartEvent.length === 0? (
                 <Message>
                     Your cart is empty <Link to='/'>Go Back</Link>
                 </Message>
             ) : (
-              <ListGroup.Item key={item.product}>
+              <ListGroup.Item key={item.event}>
                 <Row>
                     <Col md={2}>
                         <Image src={item.image} alt={item.name}
                         fluid rounded />
                     </Col>
                     <Col md={3}>
-                        <Link to={`/product/${item.product}`}>
+                        <Link to={`/event/${item.event}`}>
                             {item.name}</Link>
                     </Col>
                     <Col md={2}>${item.price}</Col>
@@ -59,7 +60,7 @@ const CartScreen = () => {
                         value={item.qty}
                         onChange={(e) =>
                         dispatch(
-                            addToCart(item.product, Number(e.
+                            addToCart(item.event, Number(e.
                                 target.value))
                                 )
                     }
@@ -76,7 +77,7 @@ const CartScreen = () => {
                         type='button'
                         variant='light'
                         onClick={() => removeFromCartHandler
-                        (item.product)}
+                        (item.event)}
                         >
                             <i className='fas fa-trash'></i>
                         </Button>
