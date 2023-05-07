@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Footer from "./components/Footer";
 import CreateEvent from './components/CreateEvent';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import CartScreen from './screens/CartScreen';
+
   function App() {
   return (
     <>

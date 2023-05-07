@@ -24,8 +24,11 @@ const CartScreen = () => {
         if (eventId) {
             dispatch(addToCart(eventId, qty))
         }
+
     }, [dispatch, eventId, qty])
     }
+
+
 
     const removeFromCartHandler =(id) => {
         dispatch(removeFromCart(id))
@@ -113,6 +116,6 @@ const CartScreen = () => {
         </Col>
     </Row>
   )
-
+ }
 
 export default CartScreen
