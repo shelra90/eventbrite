@@ -10,7 +10,8 @@ export const cartReducer = (state = {cartItems: []}, action) => {
         item.qty = existItem.qty + item.qty
         return {
           ...state,
-          cartItems: state.cartItems.map(x => x.event === existItem.event ? item : x)
+          cartItems: state.cartItems.map(x => x.event === 
+          existItem.event ? item : x)
         }
       } else {
         return {
@@ -22,7 +23,8 @@ export const cartReducer = (state = {cartItems: []}, action) => {
     case CART_REMOVE_ITEM:
       return {
         ...state,
-        cartItems: state.cartItems.filter(x => x.event !== action.payload)
+        cartItems: state.cartItems.filter(x => x.event !== 
+        action.payload)
       }
       
     default:
