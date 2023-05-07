@@ -25,7 +25,7 @@ const CartScreen = () => {
             dispatch(addToCart(productId, qty))
         }
     }, [dispatch, productId, qty])
-    }
+    
 
     const removeFromCartHandler =(id) => {
         dispatch(removeFromCart(id))
@@ -115,6 +115,6 @@ const CartScreen = () => {
         </Col>
     </Row>
   )
-
+ }
 
 export default CartScreen
