@@ -16,6 +16,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
             <Route path='/createevent' element={<CreateEvent/>} />
             <Route path="/cart/:id" element={<CartScreen
              />} />
+             <Route path="/cart" element={<CartScreen />} />
           </Routes>
       </Container>
     </main>
