@@ -1,12 +1,11 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import errorHandler from './middleware/errorMiddleware.js';
-// const events=require('./data/events');
 import eventRoutes from './routes/eventRoutes.js'
+import userRoutes from './routes/userRoutes.js'
 import connectDB from './config/db.js';
 
 const app=express();
-// Add this line
 app.use(express.json());
 
 dotenv.config()
@@ -14,6 +13,7 @@ connectDB()
 
 
 app.use('/api/events', eventRoutes)
+app.use('/api/users', userRoutes)
 
 app.use(errorHandler)
 
