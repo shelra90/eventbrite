@@ -26,7 +26,7 @@ const CartScreen = () => {
         }
 
     }, [dispatch, eventId, qty])
-    }
+    
 
 
 
