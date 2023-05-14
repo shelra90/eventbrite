@@ -107,8 +107,8 @@ setError(false);
 // Showing success message
 const successMessage = () => {
     return (
-        <div className="success" style={{display: submitted ? '' : 'none' }}>
-            <h1>New Event created Successfully!!</h1>
+        <div style={{display: submitted ? '' : 'none' }}>
+            <h1 className="success">New Event created Successfully!!</h1>
         </div>
     );
 };
@@ -116,15 +116,15 @@ const successMessage = () => {
 // Showing error message if error is true
 const errorMessage = () => {
     return (
-        <div className="error" style={{display: error ? '' : 'none'}}>
-            <h1>Please enter all the fields</h1>
+        <div  style={{display: error ? '' : 'none'}}>
+            <h1 className="error">***Please enter all the fields***</h1>
         </div>
     );
 };
 
 return (
 <div className="form">
-<div>
+<div className="createEventHeading">
 <h1>Create New Event</h1>
 </div>
 
@@ -137,32 +137,32 @@ return (
 <form>
     <div>
         {/* Labels and inputs for form data */}
-<label className="label">EventName</label>
+<label className="label">EventName*</label>
 <input onChange={handleName} className="input"
 value={eventName} type="text" />
 <br/>
-<label className="label">CategoryName </label>
+<label className="label">CategoryName* </label>
 <select name='category' className='drop' onChange={handleCategory} value={categoryName}>
     <option>Music</option>
     <option>Sports & Fitness</option>
     <option>Food and Drinks</option>
 </select>
 <br/>
-<label className="label">Description</label>
-<textarea onChange={handleDescription}></textarea>
+<label className="label">Description*</label>
+<textarea onChange={handleDescription} className='textArea'></textarea>
 <br/>
-<label className="label">Date</label>
-<input type="date" onChange={handleDate} ref={dateInputRef} />
+<label className="label">Date*</label>
+<input type="date" onChange={handleDate} ref={dateInputRef}  className="input"/>
 <br/>
-<label className="label">Location</label>
+<label className="label">Location*</label>
 <input onChange={handleLocation} className="input"
 value={location} type="text" />
 <br/>
-<label className="label">startingPrice</label>
+<label className="label">StartingPrice</label>
 <input onChange={handleStartingPrice} className="input"
 value={startingPrice} type="text" />
 <br/>
-<label className="label">endingPrice</label>
+<label className="label">EndingPrice</label>
 <input onChange={handleEndingPrice} className="input"
 value={endingPrice} type="text" />
 <br/>
@@ -172,11 +172,11 @@ value={price} type="text" />
 <br/>
 
 <label className="label">Upload Image</label>
-<input type='file' onChange={handleImageUpload} className="input"
+<input type='file' onChange={handleImageUpload} className="image"
 />
 <br/>
 
-<button onClick={handleSubmit} className="btn" type="submit">
+<button onClick={handleSubmit} className="btn submitBtn" type="submit">
 Submit
 </button>
 
