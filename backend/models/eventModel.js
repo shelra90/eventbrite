@@ -49,8 +49,10 @@ const eventSchema = mongoose.Schema({
 
     EndingPrice:{
         type: Number   
+    },
+    countInStock:{
+        type: Number
     }
-
 
 
     }, {
