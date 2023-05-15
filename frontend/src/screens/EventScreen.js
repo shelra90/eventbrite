@@ -1,43 +1,51 @@
 import React,{useState,useEffect} from 'react'
 import { useDispatch, useSelector} from 'react-redux'
+import {useNavigate} from 'react-router-dom'
 import {Row,Col,Image,Card,Button,ListGroup, ListGroupItem, Form} from 'react-bootstrap';
-import axios from 'axios';
 
-
+import { listEventDetails } from '../actions/eventActions'
+import Loader from '../components/Loader'
+import Message from '../components/Message'
 
 
 const EventScreen = props => {
 
 //  const priceLabel=props.eve.Price!==undefined? "Price:": "Starts from ";
 //  const price = props.eve.Price!==undefined? props.eve.Price : props.eve.StartingPrice;
-  const [event,setEvent]=useState({});
+  
   const [qty, setQty] =useState(1)
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  
 
   const eventDetails = useSelector((state) => state.eventDetails) 
-
+  const {loading, error, event} = eventDetails
 
   useEffect(()=>{
-    const fetchEvent=async()=>{
-        const {data}=await axios.get(`/api/events/${props.id}`)
-        
-        setEvent(data);
-    }
-    fetchEvent();
-  })
-  console.log(props);
-  console.log('event'+event);
-  const priceLabel=event.Price!==undefined? "Price:": "Starts from ";
-  const price = event.Price!==undefined? event.Price : event.StartingPrice;
+    dispatch(listEventDetails(props.id))
+  }, [dispatch, props])
+
+ 
+//   const priceLabel=event.Price!==undefined? "Price:": "Starts from ";
+//   const price = event.Price!==undefined? event.Price : event.StartingPrice;
 
   const addToCartHandler = () => {
-    navigate(`/cart/${params.id}?qty=${qty}`)
+    navigate(`/cart/${props.id}?qty=${qty}`)
   }
+  
   return (
     <div className="popup-box">
       <div className="box">
+     
         <span className="close-icon" onClick={props.handleClose}>x</span>
+        
+        {loading ? (<Loader />)
+        : error? (
+          <Message variant='danger'>{error}</Message>
+        )
+        :(
+        
+        
         <Row>
             <Col md={5}>
                 <Image src={event.Image} alt={event.EventName} fluid/>
@@ -48,7 +56,7 @@ const EventScreen = props => {
                     <ListGroupItem>
                         <h3>{event.EventName}</h3>
                     </ListGroupItem>
-                    <ListGroupItem className='popup'><span className='popupheadings'> {priceLabel} </span><strong> ${price}</strong></ListGroupItem>
+                    <ListGroupItem className='popup'><span className='popupheadings'> {event.Price!==undefined? "Price:": "Starts from "} </span><strong> ${event.Price!==undefined? event.Price : event.StartingPrice}</strong></ListGroupItem>
                     <ListGroupItem className='popup'><span className='popupheadings'>Location:</span> {event.Location}</ListGroupItem>
                     <ListGroupItem className='popup'><span className='popupheadings'>Date&Time:</span> {event.Date}</ListGroupItem>
                 </ListGroup>
@@ -61,16 +69,24 @@ const EventScreen = props => {
                                 <Col>
                                     <strong>price:</strong>
                                 </Col>
-                                {event.Price!==undefined? <Col className='priceinAddtoCart'>${price}</Col>:<Col>
+                                {event.Price!==undefined? <Col className='priceinAddtoCart'>${event.Price!==undefined? event.Price : event.StartingPrice}</Col>:<Col>
                                     <select name='price' className='drop'>
-                                    <option>${price}</option>
+                                    <option>${event.Price!==undefined? event.Price : event.StartingPrice}</option>
                                     <option>${event.EndingPrice}</option>
                                     </select>
                                 </Col>}
                                 
                             </Row>
                         </ListGroupItem>
-                            {product.countInStock > 0 && (
+                        <ListGroup.Item>
+                        <Row>
+                            <Col>Status:</Col>
+                            <Col>
+                                {event.countInStock > 0 ? 'In Stock' : 'Out Of Stock'}
+                            </Col>
+                        </Row>
+                        </ListGroup.Item>
+                            {event.countInStock > 0 && (
 
                                 <ListGroup.Item>
                                     <Row>
@@ -82,7 +98,7 @@ const EventScreen = props => {
                                         onChange={e => setQty(e.target.value)}
                                         >
                                         {
-                                            [...Array(product.countInStock).
+                                            [...Array(event.countInStock).
                                             keys()].map(x => (
                                                 <option key={x+1} value={x+1}>
                                                     {x+1}
@@ -109,7 +125,8 @@ const EventScreen = props => {
                     </ListGroup>
                 </Card>
             </Col>
-        </Row>
+        </Row>)
+        }
       </div>
     </div>
   )

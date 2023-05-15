@@ -11,7 +11,7 @@ const CartScreen = () => {
     const params = useParams();
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const productId = params.id
+    const eventId = params.id
 
     const qty = location.search ? Number(location.search.split
     ('=')[1]): 1 
@@ -24,18 +24,24 @@ const CartScreen = () => {
         if (eventId) {
             dispatch(addToCart(eventId, qty))
         }
+
     }, [dispatch, eventId, qty])
-    }
+    
+    const checkoutHandler = () => {
+        navigate('/login?redirect=shipping')
+      }
+
+
 
     const removeFromCartHandler =(id) => {
         dispatch(removeFromCart(id))
     }
-   
+    
   return (
     <Row>
         <Col md={8}>
             <h1>Shopping Cart</h1>
-            {cartEvent.length === 0? (
+            {cartItems.length === 0? (
                 <Message>
                     Your cart is empty <Link to='/'>Go Back</Link>
                 </Message>
@@ -75,8 +81,8 @@ const CartScreen = () => {
                         <Button 
                         type='button'
                         variant='light'
-                        onClick={() => removeFromCartHandler
-                        (item.event)}
+                        onClick={() => removeFromCartHandler(item.event)}
+                        
                         >
                             <i className='fas fa-trash'></i>
                         </Button>
@@ -84,7 +90,7 @@ const CartScreen = () => {
                 </Row>
               </ListGroup.Item>
                ))}
-            </ListGroup>     
+               </ListGroup>
             )}
         </Col>
         <Col md={4}>
@@ -117,6 +123,7 @@ const CartScreen = () => {
         </Col>
     </Row>
   )
+ }
 
 
 export default CartScreen
