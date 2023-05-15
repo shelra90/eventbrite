@@ -128,3 +128,70 @@ main{
   font-size: 10px;
 }
 
+
+/* create Event Styling */
+.input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.form{
+  text-align: left;
+  margin:5%;
+}
+
+.createEventHeading{
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular',  sans-serif;
+  color:#100f0f
+}
+
+.submitBtn{
+  background-color:#d1cac7;
+  color:rgb(13, 12, 12);
+  font-size: 20px;
+  text-align: center;
+  margin-left:50%;
+  
+}
+.submitBtn:hover{
+  background-color:#c0bab7; 
+  color:rgb(13, 12, 12);
+  transform:scale(1.1,1.1);
+    -webkit-transform:scale(1.1,1.1);
+    -moz-transform:scale(1.1,1.1);
+
+}
+.textArea{
+  width:100%
+}
+
+.drop{
+  margin-left:20px;
+  height:40px;
+  width:30%;
+}
+
+.image{
+  margin-left:20px;
+  margin-top:20px;
+}
+
+.error{
+  font-size: 17px;
+  color: #E65100;
+  text-align: center;
+}
+
+.success{
+  font-size: 20px;
+  color:green;
+  text-align: center;
+}
+
+.label{
+  font-weight:600;
+}
+/* End of create Event Styling */

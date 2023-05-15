@@ -11,7 +11,7 @@ const CartScreen = () => {
     const params = useParams();
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const productId = params.id
+    const eventId = params.id
 
     const qty = location.search ? Number(location.search.split
     ('=')[1]): 1 
@@ -27,8 +27,9 @@ const CartScreen = () => {
 
     }, [dispatch, eventId, qty])
     
-
-
+    const checkoutHandler = () => {
+        navigate('/login?redirect=shipping')
+      }
 
     const removeFromCartHandler =(id) => {
         dispatch(removeFromCart(id))
@@ -38,11 +39,13 @@ const CartScreen = () => {
     <Row>
         <Col md={8}>
             <h1>Shopping Cart</h1>
-            {cartEvent.length === 0? (
+            {cartItems.length === 0? (
                 <Message>
                     Your cart is empty <Link to='/'>Go Back</Link>
                 </Message>
             ) : (
+                <ListGroup variant='flush'>
+            {cartItems.map((item) => (
               <ListGroup.Item key={item.event}>
                 <Row>
                     <Col md={2}>
@@ -84,6 +87,8 @@ const CartScreen = () => {
                     </Col>
                 </Row>
               </ListGroup.Item>
+               ))}
+               </ListGroup>
             )}
         </Col>
         <Col md={4}>

@@ -28,6 +28,7 @@ export const listEventDetails = (id) => async (dispatch) => {
     try{
       dispatch({type: EVENT_DETAILS_REQUEST})
       const {data}= await axios.get(`/api/events/${id}`)
+      console.log(data)
       dispatch({
         type: EVENT_DETAILS_SUCCESS,
         payload: data
