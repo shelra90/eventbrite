@@ -87,7 +87,7 @@ const CartScreen = () => {
                     </Col>
                 </Row>
               </ListGroup.Item>
-               ))}
+               )}
                </ListGroup>
             )}
         </Col>
@@ -122,6 +122,6 @@ const CartScreen = () => {
     </Row>
   )
  }
-
+)
 
 export default CartScreen
