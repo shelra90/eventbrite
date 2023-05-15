@@ -16,6 +16,7 @@ const EventScreen = props => {
   const [qty, setQty] =useState(1)
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  
 
   const eventDetails = useSelector((state) => state.eventDetails) 
   const {loading, error, event} = eventDetails
@@ -31,6 +32,7 @@ const EventScreen = props => {
   const addToCartHandler = () => {
     navigate(`/cart/${props.id}?qty=${qty}`)
   }
+  
   return (
     <div className="popup-box">
       <div className="box">

@@ -31,10 +31,12 @@ const CartScreen = () => {
         navigate('/login?redirect=shipping')
       }
 
+
+
     const removeFromCartHandler =(id) => {
         dispatch(removeFromCart(id))
     }
-   
+    
   return (
     <Row>
         <Col md={8}>
@@ -44,8 +46,6 @@ const CartScreen = () => {
                     Your cart is empty <Link to='/'>Go Back</Link>
                 </Message>
             ) : (
-                <ListGroup variant='flush'>
-            {cartItems.map((item) => (
               <ListGroup.Item key={item.event}>
                 <Row>
                     <Col md={2}>
@@ -79,15 +79,15 @@ const CartScreen = () => {
                         <Button 
                         type='button'
                         variant='light'
-                        onClick={() => removeFromCartHandler
-                        (item.event)}
+                        onClick={() => removeFromCartHandler(item.event)}
+                        
                         >
                             <i className='fas fa-trash'></i>
                         </Button>
                     </Col>
                 </Row>
               </ListGroup.Item>
-               ))}
+               )}
                </ListGroup>
             )}
         </Col>
@@ -122,5 +122,6 @@ const CartScreen = () => {
     </Row>
   )
  }
+)
 
 export default CartScreen
