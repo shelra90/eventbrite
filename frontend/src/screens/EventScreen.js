@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { useDispatch, useSelector} from 'react-redux'
+import { useParams, useNavigate} from 'react-router-dom'
 import {Row,Col,Image,Card,Button,ListGroup, ListGroupItem, Form} from 'react-bootstrap';
 import axios from 'axios';
 
@@ -14,8 +15,10 @@ const EventScreen = props => {
   const [qty, setQty] =useState(1)
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const params = useParams
 
   const eventDetails = useSelector((state) => state.eventDetails) 
+  
 
 
   useEffect(()=>{
@@ -34,6 +37,7 @@ const EventScreen = props => {
   const addToCartHandler = () => {
     navigate(`/cart/${params.id}?qty=${qty}`)
   }
+  
   return (
     <div className="popup-box">
       <div className="box">
@@ -70,7 +74,7 @@ const EventScreen = props => {
                                 
                             </Row>
                         </ListGroupItem>
-                            {product.countInStock > 0 && (
+                            {event.countInStock > 0 && (
 
                                 <ListGroup.Item>
                                     <Row>
@@ -82,7 +86,7 @@ const EventScreen = props => {
                                         onChange={e => setQty(e.target.value)}
                                         >
                                         {
-                                            [...Array(product.countInStock).
+                                            [...Array(event.countInStock).
                                             keys()].map(x => (
                                                 <option key={x+1} value={x+1}>
                                                     {x+1}
