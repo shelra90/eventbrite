@@ -48,7 +48,8 @@ router.get('/:id', asyncHandler(async (req, res) => {
 
 router.post('/create',  upload.single('Image'),asyncHandler(async (req, res) => {
 
-    const user=await User.findById('645055170a143d7f7428238c');
+    const user=await User.findOne({name :"Admin user"});
+    console.log(user);
     const newEvent={
         user:user._id,
         EventName:req.body.EventName,
