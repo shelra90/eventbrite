@@ -1,13 +1,9 @@
 import express from 'express'
 import { getEventById, getEvents } from '../controllers/eventController.js'
 import asyncHandler from 'express-async-handler'
-<<<<<<< HEAD
-
-=======
 import event from '../models/eventModel.js'
 import multer from 'multer'
 import User from '../models/userModel.js'
->>>>>>> 69d54748a73bff52f5db16d0ca51137658e4bab2
 
 const router = express.Router()
 const DIR='./frontend/public/events_images';
