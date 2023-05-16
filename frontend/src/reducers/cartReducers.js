@@ -5,9 +5,11 @@ export const cartReducer = (state = {cartItems: []}, action) => {
   switch(action.type){
     case CART_ADD_ITEM:
       const item = action.payload
+      console.log(item);
       const existItem = state.cartItems.find(x => x.event === item.event)
       if (existItem){
-        item.qty = existItem.qty + item.qty
+        item.qty = Number(existItem.qty) +  Number(item.qty);
+        console.log("megatraon   "+item.qty);
         return {
           ...state,
           cartItems: state.cartItems.map(x => x.event === 

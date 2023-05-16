@@ -92,6 +92,7 @@ const newEvent={
 }
 console.log(newEvent);
 const postEvents=async()=>{
+
     const formData=axios.toFormData(newEvent);
     const data= await axios.post('/api/events/create',formData);
 
