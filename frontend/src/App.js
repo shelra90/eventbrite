@@ -5,6 +5,9 @@ import Footer from "./components/Footer";
 import CreateEvent from './components/CreateEvent';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import CartScreen from './screens/CartScreen';
+import LoginScreen from './screens/LoginScreen';
+import RegisterScreen from './screens/RegisterScreen';
+
 
   function App() {
   return (
@@ -15,9 +18,11 @@ import CartScreen from './screens/CartScreen';
       <Container>
         <Routes>
             <Route path='/' element={<HomeScreen />} exact />
+            <Route path='/login' element={<LoginScreen />} />
             <Route path='/createevent' element={<CreateEvent/>} />
             <Route path="/cart/:id" element={<CartScreen
              />} />
+            <Route path='/register' element={<RegisterScreen />} />
              <Route path="/cart" element={<CartScreen />} />
           </Routes>
       </Container>

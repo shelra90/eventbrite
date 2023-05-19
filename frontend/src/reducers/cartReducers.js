@@ -8,7 +8,7 @@ export const cartReducer = (state = {cartItems: []}, action) => {
       console.log(item);
       const existItem = state.cartItems.find(x => x.event === item.event)
       if (existItem){
-        item.qty = Number(existItem.qty) +  Number(item.qty);
+        item.qty = Number(item.qty);
         console.log("megatraon   "+item.qty);
         return {
           ...state,
