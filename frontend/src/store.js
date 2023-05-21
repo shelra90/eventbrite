@@ -1,13 +1,18 @@
 import {configureStore, combineReducers} from '@reduxjs/toolkit'
 import { cartReducer } from './reducers/cartReducers'
 import { eventListReducer, eventDetailsReducer } from './reducers/eventReducers'
-import { userLoginReducer } from './reducers/userReducers'
+import { userLoginReducer,
+    userDetailsReducer,
+    userUpdateProfileReducer,userRegisterReducer  } from './reducers/userReducers'
 
 const rootReducer = combineReducers({
     eventList: eventListReducer,
     eventDetails: eventDetailsReducer,
     cart: cartReducer,
-    userLogin:userLoginReducer
+    userLogin:userLoginReducer,
+    userRegister: userRegisterReducer,
+    userDetails: userDetailsReducer,
+    userUpdateProfile: userUpdateProfileReducer
    
 })
 
@@ -25,7 +30,7 @@ const initialState = {
 
 const store = configureStore({
     reducer: rootReducer,
-    preloadedState: initialState,
+    preloadedState: initialState
     
 })
 

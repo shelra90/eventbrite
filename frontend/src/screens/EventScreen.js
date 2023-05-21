@@ -31,7 +31,7 @@ const EventScreen = props => {
 //   const price = event.Price!==undefined? event.Price : event.StartingPrice;
 
   const addToCartHandler = () => {
-    navigate(`/cart/${props.id}?qty=${qty}&price=${selectedPrice}`)
+    navigate(`/cart/${props.id}?qty=${qty}&price=${props.priceTag}`)
   }
   
   return (
