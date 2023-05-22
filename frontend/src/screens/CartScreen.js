@@ -46,10 +46,13 @@ const CartScreen = () => {
                     Your cart is empty <Link to='/'>Go Back</Link>
                 </Message>
             ) : (
+
+
                 <ListGroup variant='flush'>
                     {cartItems.map((item) => (
                          <ListGroup.Item key={item.event}>
                             <Row>
+
                     <Col md={2}>
                         <Image src={item.image} alt={item.name}
                         fluid rounded />
