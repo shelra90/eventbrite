@@ -14,6 +14,7 @@ const EventScreen = props => {
 //  const price = props.eve.Price!==undefined? props.eve.Price : props.eve.StartingPrice;
   
   const [qty, setQty] =useState(1)
+  const [selectedPrice, setSelectedPrice] =useState(props.priceTag)
   const dispatch = useDispatch()
   const navigate = useNavigate()
   
@@ -30,7 +31,7 @@ const EventScreen = props => {
 //   const price = event.Price!==undefined? event.Price : event.StartingPrice;
 
   const addToCartHandler = () => {
-    navigate(`/cart/${props.id}?qty=${qty}`)
+    navigate(`/cart/${props.id}?qty=${qty}&price=${props.priceTag}`)
   }
   
   return (
@@ -44,8 +45,6 @@ const EventScreen = props => {
           <Message variant='danger'>{error}</Message>
         )
         :(
-        
-        
         <Row>
             <Col md={5}>
                 <Image src={event.Image} alt={event.EventName} fluid/>
@@ -69,8 +68,9 @@ const EventScreen = props => {
                                 <Col>
                                     <strong>price:</strong>
                                 </Col>
-                                {event.Price!==undefined? <Col className='priceinAddtoCart'>${event.Price!==undefined? event.Price : event.StartingPrice}</Col>:<Col>
-                                    <select name='price' className='drop'>
+                                {
+                                event.Price!==undefined? <Col className='priceinAddtoCart'>${event.Price!==undefined? event.Price : event.StartingPrice}</Col>:<Col>
+                                    <select name='price' className='drop' onChange={e => setSelectedPrice(e.target.value)}>
                                     <option>${event.Price!==undefined? event.Price : event.StartingPrice}</option>
                                     <option>${event.EndingPrice}</option>
                                     </select>
@@ -126,7 +126,8 @@ const EventScreen = props => {
                 </Card>
             </Col>
         </Row>)
-        }
+        }       
+        
       </div>
     </div>
   )

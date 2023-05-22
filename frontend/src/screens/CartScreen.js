@@ -13,8 +13,8 @@ const CartScreen = () => {
     const dispatch = useDispatch()
     const eventId = params.id
 
-    const qty = location.search ? Number(location.search.split
-    ('=')[1]): 1 
+    const price = Number(location.search.split('&')[1].split('=')[1]);
+    const qty = location.search ? location.search.split('&')[0].split('=')[1]: 1 
 
     const cart = useSelector((state) => state.cart)
     const {cartItems} = cart
@@ -22,10 +22,10 @@ const CartScreen = () => {
 
     useEffect(() => {
         if (eventId) {
-            dispatch(addToCart(eventId, qty))
+            dispatch(addToCart(eventId, qty, price))
         }
 
-    }, [dispatch, eventId, qty])
+    }, [dispatch, eventId, qty, price])
     
     const checkoutHandler = () => {
         navigate('/login?redirect=shipping')
@@ -46,10 +46,13 @@ const CartScreen = () => {
                     Your cart is empty <Link to='/'>Go Back</Link>
                 </Message>
             ) : (
-              <ListGroup variant='flush'>
-                {cartItems.map((item) => (
-              <ListGroup.Item key={item.event}>
-                <Row>
+
+
+                <ListGroup variant='flush'>
+                    {cartItems.map((item) => (
+                         <ListGroup.Item key={item.event}>
+                            <Row>
+
                     <Col md={2}>
                         <Image src={item.image} alt={item.name}
                         fluid rounded />
@@ -66,13 +69,14 @@ const CartScreen = () => {
                         onChange={(e) =>
                         dispatch(
                             addToCart(item.event, Number(e.
-                                target.value))
+                                target.value), item.price)
                                 )
                     }
                     >
                         {[...Array(item.countInStock).keys()].map
                         ((x) => (
                             <option key={x+1} value={x+1}>
+                                  {x+1}
                             </option>
                         ))}
                          </Form.Control>
@@ -88,18 +92,19 @@ const CartScreen = () => {
                         </Button>
                     </Col>
                 </Row>
-              </ListGroup.Item>
-               ))}
-               </ListGroup>
+                         </ListGroup.Item>
+                    ))}
+                </ListGroup>
             )}
         </Col>
-        <Col md={4}>
+
+         <Col md={4}>
             <Card>
                 <ListGroup variant='flush'>
                     <ListGroup.Item>
                         <h2>
-                            Subtotal ({cartItems.reduce((acc, item) => acc
-                            + item.qty, 0)})
+                            Subtotal ({cartItems.reduce((acc, item) => Number(acc)
+                            + Number(item.qty), 0)})
                             items 
                         </h2>
                         $
@@ -123,7 +128,7 @@ const CartScreen = () => {
         </Col>
     </Row>
   )
- }
-
+    
+}
 
 export default CartScreen
