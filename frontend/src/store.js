@@ -22,9 +22,10 @@ const rootReducer = combineReducers({
    orderDetails: orderDetailsReducer, 
    orderPay: orderPayReducer,
    
+
 })
 
-const cartItemsFromStorage = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItem'))
+const cartItemsFromStorage = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems'))
 : []
 const paymentMethodFromStorage = localStorage.getItem('paymentMethod')
   ? JSON.parse(localStorage.getItem('paymentMethod'))
@@ -33,6 +34,8 @@ const paymentMethodFromStorage = localStorage.getItem('paymentMethod')
   const userInfoFromStorage = localStorage.getItem('userInfo')
   ? JSON.parse(localStorage.getItem('userInfo'))
   : null
+
+
 
 const initialState = {
     cart: {cartItems: cartItemsFromStorage,
@@ -43,7 +46,7 @@ const initialState = {
 
 const store = configureStore({
     reducer: rootReducer,
-    preloadedState: initialState,
+    preloadedState: initialState
     
 })
 

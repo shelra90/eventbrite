@@ -9,8 +9,10 @@ import LoginScreen from './screens/LoginScreen';
 import PaymentScreen from './screens/PaymentScreen'
 //import ProfileScreen from './screens/ProfileScreen'
 //import RegisterScreen from './screens/RegisterScreen'
-//import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
 //import OrderScreen from './screens/OrderScreen';
+import RegisterScreen from './screens/RegisterScreen';
+
 
   function App() {
   return (
@@ -26,6 +28,8 @@ import PaymentScreen from './screens/PaymentScreen'
             <Route path='/createevent' element={<CreateEvent/>} />
             <Route path="/cart/:id" element={<CartScreen
              />} />
+            <Route path='/register' element={<RegisterScreen />} />
+            <Route path='/placeorder' element={<PlaceOrderScreen />} />
              <Route path="/cart" element={<CartScreen />} />
           </Routes>
       </Container>

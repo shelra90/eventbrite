@@ -5,14 +5,14 @@ import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
 // const events=require('./data/events');
 import eventRoutes from './routes/eventRoutes.js'
+
+
+
 import connectDB from './config/db.js';
 
 const app = express();
 dotenv.config()
 connectDB()
-
-app.use(express.json());
-app.use('/api/events', eventRoutes)
 
 app.use(express.json())
 app.use('/api/events', eventRoutes)
@@ -21,6 +21,16 @@ app.use('/api/orders', orderRoutes)
 app.get('/api/config/paypal', (req, res)=> 
   res.send(process.env.PAYPAL_CLIENT_ID)
 )
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,5 @@
 import express from 'express'
+import { getEventById, getEvents } from '../controllers/eventController.js'
 import asyncHandler from 'express-async-handler'
 import event from '../models/eventModel.js'
 import multer from 'multer'
@@ -31,24 +32,21 @@ var upload = multer({
     }
 });
 
-router.get('/', asyncHandler(async (req, res) => {
-   const events = await event.find({})
-   res.json(events)
-}))
+// @desc     Fetch all events
+// @route    GET /api/events
+// @access   public
+router.get('/', getEvents)
 
 
-router.get('/:id', asyncHandler(async (req, res) => {
-    const events = await event.findById(req.params.id)
-    if (events){
-        res.json(events)
-    } else {
-    res.status(404).json({message: 'Event not found'})
-    }
-}))
+// @desc      Fetch single event by id
+// @route     GET /api/events/:id
+// @access    public
+router.get('/:id', getEventById)
 
 router.post('/create',  upload.single('Image'),asyncHandler(async (req, res) => {
 
-    const user=await User.findById('645055170a143d7f7428238c');
+    const user=await User.findOne({name :"Admin user"});
+    console.log(user);
     const newEvent={
         user:user._id,
         EventName:req.body.EventName,
