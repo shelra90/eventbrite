@@ -46,7 +46,7 @@ router.get('/:id', getEventById)
 router.post('/create',  upload.single('Image'),asyncHandler(async (req, res) => {
 
     const user=await User.findOne({name :"Admin user"});
-    console.log(user);
+    
     const newEvent={
         user:user._id,
         EventName:req.body.EventName,

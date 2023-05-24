@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import errorHandler from './middleware/errorMiddleware.js';
 import eventRoutes from './routes/eventRoutes.js'
 import userRoutes from './routes/userRoutes.js'
+import orderRoutes from './routes/orderRoutes.js'
 
 
 import connectDB from './config/db.js';
