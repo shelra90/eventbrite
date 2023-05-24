@@ -1,14 +1,15 @@
 import asyncHandler from 'express-async-handler'
 import Order from '../models/orderModels.js'
+import Order from '../models/orderModels.js'
+
 
 const addOrderItems = asyncHandler(async (req, res) => {
     const {
         orderItems,
-        shippingAddress,
         paymentMethod,
         itemsPrice,
         taxPrice,
-        shippingPrice,
+        
         totalPrice
     } = req.body
 
@@ -19,11 +20,9 @@ const addOrderItems = asyncHandler(async (req, res) => {
         const order = new Order({
             orderItems, 
             user: req.user._id,
-            shippingAddress,
             paymentMethod,
             itemsPrice,
             taxPrice,
-            shippingPrice,
             totalPrice
         })
       const createdOrder = await order.save()

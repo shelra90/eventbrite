@@ -2,11 +2,11 @@ import {configureStore, combineReducers} from '@reduxjs/toolkit'
 import { cartReducer } from './reducers/cartReducers'
 import { eventListReducer, eventDetailsReducer } from './reducers/eventReducers'
 
-import { orderCreateReducer, orderPayReducer } from './reducers/orderReducers'
-
 import { userLoginReducer,
     userDetailsReducer,
     userUpdateProfileReducer,userRegisterReducer  } from './reducers/userReducers'
+import { orderCreateReducer,
+    orderDetailsReducer, orderPayReducer, } from './reducers/orderReducers'
 
 
 const rootReducer = combineReducers({
@@ -14,27 +14,34 @@ const rootReducer = combineReducers({
     eventDetails: eventDetailsReducer,
     cart: cartReducer,
 
-    
-    orderCreate: orderCreateReducer,  
-    orderPay: orderPayReducer,  
-    userLogin:userLoginReducer,
-    userRegister: userRegisterReducer,
-    userDetails: userDetailsReducer,
-    userUpdateProfile: userUpdateProfileReducer
+    userLogin: userLoginReducer,
+   userRegister: userRegisterReducer,
+   userDetails: userDetailsReducer,
+   userUpdateProfile: userUpdateProfileReducer,
+   orderCreate: orderCreateReducer, 
+   orderDetails: orderDetailsReducer, 
+   orderPay: orderPayReducer,
    
 
 })
 
 const cartItemsFromStorage = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems'))
 : []
+const paymentMethodFromStorage = localStorage.getItem('paymentMethod')
+  ? JSON.parse(localStorage.getItem('paymentMethod'))
+  : {}
 
-const userInfoFromStorage = localStorage.getItem('userInfo')
-    ? JSON.parse(localStorage.getItem('userInfo'))
-    :null
+  const userInfoFromStorage = localStorage.getItem('userInfo')
+  ? JSON.parse(localStorage.getItem('userInfo'))
+  : null
+
+
 
 const initialState = {
-    cart: {cartItems: cartItemsFromStorage},
-    userLogin:{userInfo:userInfoFromStorage}
+    cart: {cartItems: cartItemsFromStorage,
+        paymentMethod: paymentMethodFromStorage
+    },
+    userLogin: { userInfo: userInfoFromStorage },
 }
 
 const store = configureStore({

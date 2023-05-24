@@ -5,38 +5,27 @@ import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
 import { useEffect } from 'react'
-
 const CartScreen = () => {
     const location = useLocation()
     const params = useParams();
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const eventId = params.id
-
     const price = Number(location.search.split('&')[1].split('=')[1]);
-    const qty = location.search ? location.search.split('&')[0].split('=')[1]: 1 
-
+    const qty = location.search ? location.search.split('&')[0].split('=')[1]: 1
     const cart = useSelector((state) => state.cart)
     const {cartItems} = cart
-    
-
     useEffect(() => {
         if (eventId) {
             dispatch(addToCart(eventId, qty, price))
         }
-
     }, [dispatch, eventId, qty, price])
-    
     const checkoutHandler = () => {
         navigate('/login?redirect=shipping')
       }
-
-
-
     const removeFromCartHandler =(id) => {
         dispatch(removeFromCart(id))
     }
-    
   return (
     <Row>
         <Col md={8}>
@@ -46,13 +35,10 @@ const CartScreen = () => {
                     Your cart is empty <Link to='/'>Go Back</Link>
                 </Message>
             ) : (
-
-
                 <ListGroup variant='flush'>
                     {cartItems.map((item) => (
                          <ListGroup.Item key={item.event}>
                             <Row>
-
                     <Col md={2}>
                         <Image src={item.image} alt={item.name}
                         fluid rounded />
@@ -82,11 +68,10 @@ const CartScreen = () => {
                          </Form.Control>
                     </Col>
                     <Col md={2}>
-                        <Button 
+                        <Button
                         type='button'
                         variant='light'
                         onClick={() => removeFromCartHandler(item.event)}
-                        
                         >
                             <i className='fas fa-trash'></i>
                         </Button>
@@ -97,7 +82,6 @@ const CartScreen = () => {
                 </ListGroup>
             )}
         </Col>
-
          <Col md={4}>
             <Card>
                 <ListGroup variant='flush'>
@@ -105,7 +89,7 @@ const CartScreen = () => {
                         <h2>
                             Subtotal ({cartItems.reduce((acc, item) => Number(acc)
                             + Number(item.qty), 0)})
-                            items 
+                            items
                         </h2>
                         $
                         {cartItems
@@ -114,7 +98,7 @@ const CartScreen = () => {
                         .toFixed(2)}
                     </ListGroup.Item>
                     <ListGroup.Item>
-                        <Button 
+                        <Button
                         type='button'
                         className='btn-block'
                         disabled={cartItems.length === 0}
@@ -128,7 +112,17 @@ const CartScreen = () => {
         </Col>
     </Row>
   )
-    
 }
-
 export default CartScreen
+
+
+
+
+
+
+
+
+
+
+
+

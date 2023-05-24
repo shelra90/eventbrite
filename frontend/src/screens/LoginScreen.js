@@ -29,6 +29,7 @@ const LoginScreen = () => {
   const submitHandler = (e) => {
     e.preventDefault()
     dispatch(login(email, password))
+    navigate('/payment')
   }
   return (
     <FormContainer>
