@@ -8,9 +8,9 @@ import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
 import PaymentScreen from './screens/PaymentScreen'
 //import ProfileScreen from './screens/ProfileScreen'
-//import RegisterScreen from './screens/RegisterScreen'
+
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
-//import OrderScreen from './screens/OrderScreen';
+import OrderScreen from './screens/OrderScreen';
 import RegisterScreen from './screens/RegisterScreen';
 
 
@@ -31,6 +31,7 @@ import RegisterScreen from './screens/RegisterScreen';
             <Route path='/register' element={<RegisterScreen />} />
             <Route path='/placeorder' element={<PlaceOrderScreen />} />
              <Route path="/cart" element={<CartScreen />} />
+             <Route path='/order/:id' element={<OrderScreen />} />  
           </Routes>
       </Container>
     </main>

@@ -21,7 +21,7 @@ const CartScreen = () => {
         }
     }, [dispatch, eventId, qty, price])
     const checkoutHandler = () => {
-        navigate('/login?redirect=shipping')
+        navigate('/login?redirect=/payment')
       }
     const removeFromCartHandler =(id) => {
         dispatch(removeFromCart(id))

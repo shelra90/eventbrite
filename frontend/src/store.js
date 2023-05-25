@@ -15,12 +15,12 @@ const rootReducer = combineReducers({
     cart: cartReducer,
 
     userLogin: userLoginReducer,
-   userRegister: userRegisterReducer,
-   userDetails: userDetailsReducer,
-   userUpdateProfile: userUpdateProfileReducer,
-   orderCreate: orderCreateReducer, 
-   orderDetails: orderDetailsReducer, 
-   orderPay: orderPayReducer,
+    userRegister: userRegisterReducer,
+    userDetails: userDetailsReducer,
+    userUpdateProfile: userUpdateProfileReducer,
+    orderCreate: orderCreateReducer, 
+    orderDetails: orderDetailsReducer, 
+    orderPay: orderPayReducer,
    
 
 })
