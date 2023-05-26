@@ -21,8 +21,7 @@ const PlaceOrderScreen = () => {
         cart.cartItems.reduce((acc, item) => acc + item.price *
         item.qty, 0)
     )
-    cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 
-        100)
+    
     cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).
     toFixed(2)))
     cart.totalPrice =(
@@ -66,14 +65,8 @@ return (
         <Col md={8}>
             <ListGroup variant='flush'>
                 <ListGroup.Item>
-                    <h2>Shipping</h2>
-                    <p>
-                        <strong>Address:</strong>
-                        {cart.shippingAddress.address}, {cart.
-                        shippingAddress.city}{' '}
-                        {cart.shippingAddress.postalCode}, {''}
-                        {cart.shippinAddress.country}
-                        </p>
+                    
+                   
                 </ListGroup.Item>
 
             <ListGroup.Item>
@@ -137,8 +130,7 @@ return (
                 </ListGroup.Item>
                 <ListGroup.Item>
                     <Row>
-                        <Col>Shipping</Col>
-                        <Col>${cart.shippingPrice}</Col>
+                        
                     </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
