@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { Button } from 'react-bootstrap/lib/InputGroup'
 import {
     ORDER_CREATE_REQUEST,
     ORDER_CREATE_SUCCESS,
@@ -74,7 +73,7 @@ export const createOrder = (order) => async (dispatch,
                 })
             } catch (error) {
                 dispatch({
-                    type: ORDER_CREATE_FAIL,
+                    type: ORDER_DETAILS_FAIL,
                     payload: 
                         error.response && error.response.data.message 
                         ? error.response.data.message
