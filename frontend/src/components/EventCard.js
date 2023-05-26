@@ -1,24 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {Card} from 'react-bootstrap';
-import EventScreen from '../screens/EventScreen';
-
+import { Link } from 'react-router-dom';
 const EventCard = ({eve}) => {
   var buttonName="Reserve a spot";
-  
-  const priceTag=eve.Price!==undefined? "Price: $"+ eve.Price: "Starts from $"+ eve.StartingPrice;
-  const price = eve.Price!==undefined? eve.Price:  eve.StartingPrice;
-  const [isOpen, setIsOpen] = useState(false);
-  
-  const togglePopup = () => {
-      setIsOpen(!isOpen);
-  }
   
   return (
     
     <>
     <div>
-    <Card className='my-3 p-3 rounded' onClick={togglePopup}>
+    <Card className='my-3 p-3 rounded'>
+      <Link to={`/event/${eve._id}`}>
         <Card.Img src={eve.Image} variant='top'></Card.Img>
+        </Link>
         <Card.Body>
           <Card.Title as='div'>
             <strong>{eve.EventName}</strong>
@@ -34,19 +27,17 @@ const EventCard = ({eve}) => {
             </div>
           </Card.Text>
           <Card.Text as='div' className='price'>
-             {priceTag}
+             Price: ${eve.Price}
           </Card.Text>
           <div className="button">
-            <a href="#" className="btn btn-primary">{buttonName}</a>
+          <Link to={`/event/${eve._id}`}>
+            <button className="btn btn-primary">{buttonName}</button>
+            </Link>
           </div>
           
         </Card.Body>
       </Card>
-      {isOpen && <EventScreen
-      id={eve._id}
-      handleClose={togglePopup}
-      priceTag={price}
-    />}
+      
     </div>
       
     </>

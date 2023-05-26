@@ -11,28 +11,27 @@ const PlaceOrderScreen = () => {
     const navigate = useNavigate()
 
     const cart =useSelector((state) => state.cart)
+    const updatedCart = {}
 
     //  Calculate prices
     const addDecimals = (num) => {
         return (Math.round(num * 100) / 100).toFixed(2)
     }
 
-    cart.itemsPrice = addDecimals(
-        cart.cartItems.reduce((acc, item) => acc + item.price *
-        item.qty, 0)
+    updatedCart.itemsPrice = addDecimals(
+        cart.cartItems.reduce((acc, item) => Number(acc) + Number(item.price) *
+        Number(item.qty), 0)
     )
-    cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 
-        100)
-    cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).
+   
+    updatedCart.taxPrice = addDecimals(Number((0.15 * updatedCart.itemsPrice).
     toFixed(2)))
-    cart.totalPrice =(
-        Number(cart.itemsPrice) +
-        Number(cart.shippingPrice) +
-        Number(cart.taxPrice)
+    updatedCart.totalPrice =(
+        Number(updatedCart.itemsPrice) +
+        Number(updatedCart.taxPrice)
     ).toFixed(2)
-    
+    console.log(updatedCart.itemsPrice)
 
-    constorderCreate = useSelector((state) => state.
+    const orderCreate = useSelector((state) => state.
     orderCreate)
     const { order, success, error } = orderCreate
     
@@ -41,23 +40,22 @@ const PlaceOrderScreen = () => {
         if (success) {
             navigate(`/order/${order._id}`)
         }
-     }, [navigate, success, order._id])
+     }, [navigate, success, order])
     
 
     const placeOrderHandler = () => {
         dispatch(
         createOrder({
         orderItems: cart.cartItems,
-        shippingAddress: cart.shippinAddress,
+        
         paymentMethod: cart.paymentMethod,
-        itemsPrice: cart.itemsPrice,
-        shippinPrice: cart.shippinPrice,
-        taxPrice: cart.taxPrice,
-        totalPrice: cart.totalPrice,
+        itemsPrice: updatedCart.itemsPrice,
+        taxPrice: updatedCart.taxPrice,
+        totalPrice: updatedCart.totalPrice,
         })
         )
     }
-}
+
 
 return (
     <>
@@ -65,16 +63,6 @@ return (
     <Row>
         <Col md={8}>
             <ListGroup variant='flush'>
-                <ListGroup.Item>
-                    <h2>Shipping</h2>
-                    <p>
-                        <strong>Address:</strong>
-                        {cart.shippingAddress.address}, {cart.
-                        shippingAddress.city}{' '}
-                        {cart.shippingAddress.postalCode}, {''}
-                        {cart.shippinAddress.country}
-                        </p>
-                </ListGroup.Item>
 
             <ListGroup.Item>
                 <h2>Payment Method</h2>
@@ -91,8 +79,8 @@ return (
                             {cart.cartItems.map((item, index) => (
                                 <ListGroup.Item key={index}>
                                 <Row>
-                                    <Col md={1}>
-                                        <Image
+                                    <Col md={4}>
+                                        <Image className='placeOrderScreenImages'
                                         src={item.image}
                                         alt={item.name}
                                         fluid
@@ -105,7 +93,7 @@ return (
                                             {item.name}
                                         </Link>
                                         </Col>
-                                        <Col md={4}>
+                                        <Col md={2}>
                                     {item.qty} x ${item.price} = ${item.
                                         qty * item.price}
                                         </Col>
@@ -126,31 +114,26 @@ return (
                     <ListGroup.Item>
                         <Row>
                             <Col>Items</Col>
-                            <Col>${cart.itemsPrice}</Col>
+                            <Col>${updatedCart.itemsPrice}</Col>
                         </Row>
                     </ListGroup.Item>
                 <ListGroup.Item>
                 <Row>
                     <Col>Items</Col>
-                    <Col>${cart.itemsPrice}</Col>
+                    <Col>${updatedCart.itemsPrice}</Col>
                 </Row>
                 </ListGroup.Item>
-                <ListGroup.Item>
-                    <Row>
-                        <Col>Shipping</Col>
-                        <Col>${cart.shippingPrice}</Col>
-                    </Row>
-                </ListGroup.Item>
+               
                 <ListGroup.Item>
                     <Row>
                         <Col>Tax</Col>
-                        <Col>${cart.taxPrice}</Col>
+                        <Col>${updatedCart.taxPrice}</Col>
                         </Row>              
                         </ListGroup.Item>
                         <ListGroup.Item>
                             <Row>
                                 <Col>Total</Col>
-                                <Col>${cart.totalPrice}</Col>
+                                <Col>${updatedCart.totalPrice}</Col>
                             </Row>
                             </ListGroup.Item>
                             <ListGroup.Item>
@@ -172,7 +155,7 @@ return (
     </Row>
     </>
 )
-                        
+ }                        
 
 export default PlaceOrderScreen
 

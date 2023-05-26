@@ -19,14 +19,14 @@ const Header = () => {
         <Navbar bg="light" variant="light" expand="lg" collapseOnSelect>
 
             <Container>
-
+            <Nav.Link href="/">
               <h1 className="title">Eventbrite</h1>
+              </Nav.Link>
               <SearchBar  placeholder="Search Events..."> </SearchBar>
               {/* <Navbar.Brand href="/"></Navbar.Brand> */}
               <Navbar.Toggle aria-controls="basic-navbar-nav container-fluid" />
               <Navbar.Collapse id="basic-navbar-nav container-fluid">
                   <Nav className="ms-auto">
-                    <Nav.Link href="/"> Home </Nav.Link>
                     <Nav.Link href="/CreateEvent"><i className="fa fa-plus" aria-hidden="true"></i> Create Event </Nav.Link>    
                     {/* <Nav.Link href="/"><i className="fa fa-plus" aria-hidden="true"></i> Create Event </Nav.Link>     */}
                     <Nav.Link href="/cart"><i className="fa-sharp fa-solid fa-cart-shopping"></i> Cart </Nav.Link>  

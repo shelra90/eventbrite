@@ -7,6 +7,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
         paymentMethod,
         itemsPrice,
         taxPrice,
+        shippingPrice,
         totalPrice
     } = req.body
 
