@@ -54,8 +54,6 @@ router.post('/create',  upload.single('Image'),asyncHandler(async (req, res) => 
         Description:req.body.Description,
         Image:'events_images/'+ req.file.filename,
         Location:req.body.Location,
-        StartingPrice:req.body.StartingPrice, 
-        EndingPrice:req.body.EndingPrice, 
         Price:req.body.Price, 
         Date:req.body.Date
     }

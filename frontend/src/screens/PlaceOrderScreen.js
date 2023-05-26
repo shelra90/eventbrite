@@ -79,8 +79,8 @@ return (
                             {cart.cartItems.map((item, index) => (
                                 <ListGroup.Item key={index}>
                                 <Row>
-                                    <Col md={1}>
-                                        <Image
+                                    <Col md={4}>
+                                        <Image className='placeOrderScreenImages'
                                         src={item.image}
                                         alt={item.name}
                                         fluid
@@ -93,7 +93,7 @@ return (
                                             {item.name}
                                         </Link>
                                         </Col>
-                                        <Col md={4}>
+                                        <Col md={2}>
                                     {item.qty} x ${item.price} = ${item.
                                         qty * item.price}
                                         </Col>

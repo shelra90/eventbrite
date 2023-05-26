@@ -59,7 +59,6 @@ const OrderScreen = () => {
         <Col md={8}>
           <ListGroup variant='flush'>
             <ListGroup.Item>
-              <h2>Shipping</h2>
               <p>
                 <strong>Name: </strong> {order.user.name}
               </p>
@@ -92,8 +91,8 @@ const OrderScreen = () => {
                   {order.orderItems.map((item, index) => (
                     <ListGroup.Item key={index}>
                       <Row>
-                        <Col md={1}>
-                          <Image
+                        <Col md={4}>
+                          <Image className='orderScreenImages'
                             src={item.image}
                             alt={item.name}
                             fluid
@@ -101,7 +100,7 @@ const OrderScreen = () => {
                           />
                         </Col>
                         <Col>
-                          <Link to={`/product/${item.product}`}>
+                          <Link to={`/event/${item.event}`}>
                             {item.name}
                           </Link>
                         </Col>
