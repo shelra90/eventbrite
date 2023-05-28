@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# dependencies
+/.pnp
+.pnp.js
+
 # Compiled output
 /dist
 /tmp
@@ -7,7 +11,7 @@
 /bazel-out
 
 # Node
-node_modules
+/node_modules
 /frontend/node_modules
 npm-debug.log
 yarn-error.log
@@ -50,5 +54,5 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
-
+/frontend/package-lock.json
 .env

@@ -7,8 +7,6 @@ const [eventName, setEventName] = useState('');
 const [categoryName, setCategoryName] = useState('Music');
 const [description, setDescription] = useState('');
 const [location, setLocation] = useState('');
-const [startingPrice, setStartingPrice] = useState();
-const [endingPrice, setEndingPrice] = useState();
 const [price, setPrice] = useState();
 const [date, setDate] = useState('');
 const [image, setImage] = useState(null);
@@ -50,19 +48,8 @@ setLocation(e.target.value);
 setSubmitted(false);
 };
 
-// Handling the password change
-const handleStartingPrice = (e) => {
-setStartingPrice(e.target.value);
-setSubmitted(false);
-};
 
-// Handling the password change
-const handleEndingPrice = (e) => {
-setEndingPrice(e.target.value);
-setSubmitted(false);
-};
-
-// Handling the password change
+// Handling the price 
 const handlePrice = (e) => {
 setPrice(e.target.value);
 setSubmitted(false);
@@ -85,13 +72,12 @@ const newEvent={
     Description:description,
     Image:image,
     Location:location,
-    StartingPrice:startingPrice, 
-    EndingPrice:endingPrice, 
     Price:price, 
     Date:date
 }
 console.log(newEvent);
 const postEvents=async()=>{
+
     const formData=axios.toFormData(newEvent);
     const data= await axios.post('/api/events/create',formData);
 
@@ -157,14 +143,6 @@ value={eventName} type="text" />
 <label className="label">Location*</label>
 <input onChange={handleLocation} className="input"
 value={location} type="text" />
-<br/>
-<label className="label">StartingPrice</label>
-<input onChange={handleStartingPrice} className="input"
-value={startingPrice} type="text" />
-<br/>
-<label className="label">EndingPrice</label>
-<input onChange={handleEndingPrice} className="input"
-value={endingPrice} type="text" />
 <br/>
 <label className="label">Price</label>
 <input onChange={handlePrice} className="input"

@@ -6,8 +6,7 @@ const events = [
         Description:"The Asbury Park Vegan Food Festival is a two-day celebration that features yummy vegan and plant-based meals from local chefs, as well as vegan products, plant-based fashion, live music and good times. All welcome!",
         Image:'/events_images/asburyPark.png',
         Location:"Bradley Park 101-199 5th Ave Asbury Park, NJ 07712",
-        StartingPrice:20,
-        EndingPrice:50,
+        Price:20,
         countInStock:50
         },
         
@@ -29,8 +28,7 @@ const events = [
         Description: "The Ferry terminal at Liberty State Park will be hosting an eclectic local variety of superbly fermented beer and cider in all styles combining the best elements of a Beer Garden with the staggering array of choices found only at a Craft Beer Festival. Guests will enjoy craft beer samples for the entire evening paired with live entertainment, Food and Interactive Games",
         Image: "/events_images/jerseycity_craft_beer_fest.png",
         Location: "Liberty State Park Ferry Terminal 1 Audrey Zapp Drive Jersey City, NJ 07305",
-        StartingPrice: 15,
-        EndingPrice: 60,
+        Price: 15,
         countInStock:50
     },
     
@@ -41,8 +39,7 @@ const events = [
         Description: "Midnight Market is an exciting take on the classic night market scene. We are excited to return to Jersey City at a new venue in the Mural Arts District",
         Image:"/events_images/MidnightMarket.png",
         Location: "MAD JC 227 Coles Street Jersey City, NJ 07310",
-        StartingPrice: 10,
-        EndingPrice: 25,
+        Price: 25,
         countInStock:50
     },
     
@@ -64,8 +61,7 @@ const events = [
         Description:"All the greatest hits! Come sing and dance all night to songs of the 80s!",
         Image:"/events_images/80sNight.png",
         Location:"Big Shots Restaurant & Lounge 780 U.S. 1 Woodbridge Township, NJ 08830",
-        StartingPrice: 5,
-        EndingPrice: 10,
+        Price: 5,
         countInStock:50
         },
         
@@ -76,8 +72,7 @@ const events = [
         Description: "The Bayville Music Festival has been around since 2016, and has grown to become New Jersey’s only Reggae Rock festival. Hosted by NJ’s own native band - Green Knuckle Material, this year’s festival will be one to remember.What started as a DIY backyard show has now evolved into an event you won’t want to miss with the biggest lineup in the Reggae Rock scene yet.Bayville VII will be moving from the backyard to a beautiful local bayside venue called B2 Bistro & Bar. Along with some great music, you’ll also enjoy majestic views of Barnegat Bay, amazing food and drinks, a full service Tiki Bar, and for those that opt for our VIP package - access to a beautiful in-ground pool",
         Image: "/events_images/bayville_Fest.png",
         Location: "B2 Bistro + Bar 125 Bayview Avenue Berkeley Township, NJ 08721",
-        StartingPrice: 50,
-        EndingPrice: 100,
+        Price: 100,
         countInStock:50
     },
     
@@ -88,8 +83,7 @@ const events = [
         Description:"Emo rock music covers of bands such as Taking Back Sunday, Fall Out Boy, Paramore, Jimmy Eat World, My Chemical Romance, The Used, & MANY MORE!Wear your favorite band Tee, or come as yourself!",
         Image:"/events_images/emo_night.png",
         Location:"Big Shots Restaurant & Lounge 780 U.S. 1 Woodbridge Township, NJ 08830",
-        StartingPrice: 5,
-        EndingPrice: 20,
+        Price: 5,
         countInStock:50
     },
     
@@ -123,8 +117,7 @@ const events = [
         Description:"Country Night - Live DJ & Line Dance Instructor!Sing & dance to a whole night of country hits! 1 Party 2 FLOORS ALL THE BEST COUNTRY HITS.",
         Image:"/events_images/countryNight.png",
         Location:"Big Shots Restaurant & Lounge 780 U.S. 1 Woodbridge Township, NJ 08830",
-        StartingPrice:20,
-        EndingPrice:50,
+        Price:50,
         countInStock:50
         },
         
@@ -146,8 +139,7 @@ const events = [
         Description: "Is this a dream? Yoga WITH alpacas?! Making every animal-lover's dream a reality! Join us for a fun experience - featuring a very special outdoor yoga class surrounded by LIVE alpacas! Grab your yoga mats, and join our inspiring instructor to zen out in a grassy pasture with your fellow yogis surrounded by our friendly, fuzzy & endlessly curious alpacas!",
         Image:"/events_images/YogaWithAlpacas.png",
         Location:"Morning Glori Farm 131 Navy Lane Evesham Township, NJ 08053",
-        StartingPrice:25,
-        EndingPrice:70,
+        Price:25,
         countInStock:50
         },
         
@@ -159,8 +151,7 @@ const events = [
         Description: "The PBA Players Championship may just be the most anticipated event of the year for the athletes and fans — as it marks the PBA’s long-awaited homecoming to Bowlero North Brunswick. The final major champion of 2023 will have to emerge from the 12-player bracket finals, airing in entirety on FS1 and FOX.",
         Image:"/events_images/PBAPlayerChampionship.png",
         Location:"Bowlero North Brunswick 1 Carolier Lane North Brunswick Township, NJ 08902",
-        StartingPrice:20,
-        EndingPrice:30,
+        Price:15,
         countInStock:50
         },
        
