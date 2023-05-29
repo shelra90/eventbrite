@@ -40,16 +40,10 @@ const eventSchema = mongoose.Schema({
 
     Price: {
         type: Number,
+        required: true
         
     },
-
-    StartingPrice:{
-        type: Number
-    },
-
-    EndingPrice:{
-        type: Number   
-    },
+    
     countInStock:{
         type: Number
     }

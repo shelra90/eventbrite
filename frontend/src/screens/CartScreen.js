@@ -11,17 +11,18 @@ const CartScreen = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const eventId = params.id
-    const price = Number(location.search.split('&')[1].split('=')[1]);
-    const qty = location.search ? location.search.split('&')[0].split('=')[1]: 1
+
+    const qty = location.search ? Number(location.search.split('=')[1]) : 1
     const cart = useSelector((state) => state.cart)
     const {cartItems} = cart
     useEffect(() => {
         if (eventId) {
-            dispatch(addToCart(eventId, qty, price))
+            dispatch(addToCart(eventId, qty))
         }
-    }, [dispatch, eventId, qty, price])
+    }, [dispatch, eventId, qty])
+
     const checkoutHandler = () => {
-        navigate('/login?redirect=shipping')
+        navigate('/login?redirect=/payment')
       }
     const removeFromCartHandler =(id) => {
         dispatch(removeFromCart(id))
@@ -39,15 +40,15 @@ const CartScreen = () => {
                     {cartItems.map((item) => (
                          <ListGroup.Item key={item.event}>
                             <Row>
-                    <Col md={2}>
-                        <Image src={item.image} alt={item.name}
+                    <Col md={4}>
+                        <Image className='cartScreenImage' src={item.image} alt={item.name}
                         fluid rounded />
                     </Col>
                     <Col md={3}>
                         <Link to={`/event/${item.event}`}>
                             {item.name}</Link>
                     </Col>
-                    <Col md={2}>${item.price}</Col>
+                    <Col md={1}>${item.price}</Col>
                     <Col md={2}>
                         <Form.Control
                         as='select'
@@ -55,7 +56,7 @@ const CartScreen = () => {
                         onChange={(e) =>
                         dispatch(
                             addToCart(item.event, Number(e.
-                                target.value), item.price)
+                                target.value))
                                 )
                     }
                     >
@@ -67,7 +68,7 @@ const CartScreen = () => {
                         ))}
                          </Form.Control>
                     </Col>
-                    <Col md={2}>
+                    <Col md={1}>
                         <Button
                         type='button'
                         variant='light'
@@ -83,7 +84,7 @@ const CartScreen = () => {
             )}
         </Col>
          <Col md={4}>
-            <Card>
+            <Card className='checkoutBox'>
                 <ListGroup variant='flush'>
                     <ListGroup.Item>
                         <h2>
