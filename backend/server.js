@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import path from 'path';
 import errorHandler from './middleware/errorMiddleware.js';
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
@@ -22,23 +23,18 @@ app.get('/api/config/paypal', (req, res)=>
   res.send(process.env.PAYPAL_CLIENT_ID)
 )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+const __dirname = path.resolve()
+if (process.env.NODE_ENV === 'production'){
+  app.use(express.static(path.join(__dirname, '/frontend/build')))
+  app.get('*', (reg, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+  })
+}
 
 
 app.use(errorHandler)
-app.listen(5467,console.log('server is running on port 5467'))
+const PORT = process.env.PORT
+app.listen(PORT,console.log('server is running on port ${PORT}'))
 
 // app.get('/api/events',(req,res)=>{
 //     res.json(events)
