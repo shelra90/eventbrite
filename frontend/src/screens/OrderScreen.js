@@ -166,7 +166,7 @@ const OrderScreen = () => {
                 }}
                 onApprove={function (data, actions) {
                     return actions.order.capture().then(function () {
-                      console.log(data)
+                     
                         dispatch(payOrder(orderId, data))
                     });
                 }}

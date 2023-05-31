@@ -22,38 +22,7 @@ app.get('/api/config/paypal', (req, res)=>
   res.send(process.env.PAYPAL_CLIENT_ID)
 )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.use(errorHandler)
 app.listen(5467,console.log('server is running on port 5467'))
 
-// app.get('/api/events',(req,res)=>{
-//     res.json(events)
-// })
-
-// app.get('/api/event/:id',(req,res)=>{
-//     const event=events.find(e=>e.Id==req.params.id);
-//     res.json(event)
-// })
-
-
-//app.get('/api/event/:id',(req,res)=>{
-
-  //  const event=events.find(e=>e.Id==req.params.id);
-   // console.log(event)
-   // res.json(event)
-//})
 
