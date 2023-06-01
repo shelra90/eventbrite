@@ -7,7 +7,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
 import PaymentScreen from './screens/PaymentScreen'
-//import ProfileScreen from './screens/ProfileScreen'
+import ProfileScreen from './screens/ProfileScreen'
 import EventScreen from "./screens/EventScreen";
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
@@ -31,6 +31,7 @@ import RegisterScreen from './screens/RegisterScreen';
              />} />
             <Route path='/register' element={<RegisterScreen />} />
             <Route path='/placeorder' element={<PlaceOrderScreen />} />
+            <Route path='/profile' element={<ProfileScreen />} />
              <Route path="/cart" element={<CartScreen />} />
              <Route path='/order/:id' element={<OrderScreen />} />  
           </Routes>
