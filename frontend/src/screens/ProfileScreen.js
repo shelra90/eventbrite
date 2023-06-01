@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import {useNavigate } from 'react-router-dom'
-import { Form, Button, Row, Col } from 'react-bootstrap'
+import { Form, Button, Row, Col, ListGroup } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { getUserDetails, updateUserProfile } from '../actions/userActions'
+
 
 const ProfileScreen = () => {
   const [name, setName] = useState('')
@@ -12,6 +13,7 @@ const ProfileScreen = () => {
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [message, setMessage] = useState(null)
+  const [orderItems, setOrderItems]=useState([])
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -32,8 +34,10 @@ const ProfileScreen = () => {
       if (!user.name) {
         dispatch(getUserDetails('profile'))
       } else {
+        console.log(user);
         setName(user.name)
         setEmail(user.email)
+        setOrderItems(user.orderItems)
       }
     }
   }, [dispatch, userInfo, user, navigate])
@@ -103,6 +107,27 @@ const ProfileScreen = () => {
       </Col>
       <Col md={9}>
         <h2>My Orders</h2>
+        
+        {orderItems.length === 0? (
+                <Message>
+                    You have zero Orders
+                </Message>
+            ) : (
+                <ListGroup variant='flush'>
+                    {orderItems.map((item) => (
+                         <ListGroup.Item key={item.name}>
+                            <Row>
+                           
+                    <Col md={3}>
+                            {item.name}
+                    </Col>
+                    <Col md={2}>qty: {item.qty}</Col>
+                    <Col md={1}>${item.price}</Col>
+                    </Row>
+                    </ListGroup.Item>
+                    ))}
+                </ListGroup>
+            )}
       </Col>
     </Row>
   )

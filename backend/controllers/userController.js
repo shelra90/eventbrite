@@ -1,5 +1,6 @@
 import asyncHandler from 'express-async-handler'
 import User from '../models/userModel.js'
+import Order from '../models/orderModels.js'
 import generateToken from '../utills/generateToken.js'
 
 const authUser = asyncHandler(async (req, res) => {
@@ -22,12 +23,17 @@ const authUser = asyncHandler(async (req, res) => {
 
 const getUserProfile = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id)
+  const orders= await Order.find({user:req.user._id})
+  const orderItems=[];
+  orders.forEach(order=>orderItems.push(...order.orderItems))
+
   if (user) {
     res.json({
       _id: user._id,
       name: user.name,
       email: user.email,
-      isAdmin: user.isAdmin
+      isAdmin: user.isAdmin,
+      orderItems: orderItems
     })
   } else {
     res.status(404)

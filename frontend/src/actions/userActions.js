@@ -31,6 +31,7 @@ export const login = (email, password) => async (dispatch) => {
         { email, password },
         config
       )
+     
   
       dispatch({
         type: USER_LOGIN_SUCCESS,
@@ -72,7 +73,7 @@ export const login = (email, password) => async (dispatch) => {
       }
   
       const { data } = await axios.get(`/api/users/profile`, config)
-  
+      
       dispatch({
         type: USER_DETAILS_SUCCESS,
         payload: data,

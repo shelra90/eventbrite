@@ -38,6 +38,7 @@ const OrderScreen = () => {
     
     const addPayPalScript = async () => {
       const { data: clientId } = await axios.get('/api/config/paypal')
+      console.log("hari   "+clientId);
       setClientId(clientId)
     }
     addPayPalScript()
@@ -145,7 +146,7 @@ const OrderScreen = () => {
                   {loadingPay && <Loader />}
                     <PayPalScriptProvider options={{ "client-id": client_Id,
                     components: "buttons",
-                    currency: "USD" }}>
+                    currency: "USD" }} deferLoading = {false}>
                         <PayPalButtons 
                          style={{ layout: "horizontal" }}
                          createOrder={(data, actions) => {
@@ -166,7 +167,7 @@ const OrderScreen = () => {
                 }}
                 onApprove={function (data, actions) {
                     return actions.order.capture().then(function () {
-                      console.log(data)
+                     
                         dispatch(payOrder(orderId, data))
                     });
                 }}

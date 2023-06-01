@@ -9,7 +9,6 @@ const addOrderItems = asyncHandler(async (req, res) => {
         paymentMethod,
         itemsPrice,
         taxPrice,
-        
         totalPrice
     } = req.body
 
@@ -42,6 +41,8 @@ const getOrderById = asyncHandler(async (req, res) => {
         throw new Error('Order not found')
     }
 })
+
+
 
 const updateOrderToPaid = asyncHandler(async (req, res) => {
     const order = await Order.findById(req.params.id)
