@@ -1,51 +1,80 @@
-
-import React from 'react'
+import React from 'react';
 import { Button } from 'react-bootstrap'
-// import axios from " axios "
-// import  { useState } from "react"
+import EventCard from './EventCard'
+import { useState } from 'react'
 
-// function Search() {
+const SearchBar = ({events, placeholder}) => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
 
-// const [eventname, setName] = useState("");
-
-// async function serch(event) {
-//   event.preventDefault();
-
-//   try {
-//     axios.post("http://localhost:5467/events/" + eventname
-   
-//     ).then((res) => 
-//     {
-//       console.log(res.data.data.name);
-
-//       if (res.data.data =="User not found")
-//       {
-//         alert("User not found");
-
-//       }, fail => {
-//         console.error(fail); //Error
-//       }
-//     })
-//   }
-// }
-
-const SearchBar = ({placeholder, data}) => {
+    const handleSearchChange = (e) => {
+        setSearchTerm(e.target.value);
+    };
+    
+      const handleSearchSubmit = (e) => {
+        e.preventDefault();
+        const results = events.filter((event) =>
+          event.EventName.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setSearchResults(results);
+      };
+    
   return (
+   <form onSubmit={handleSearchSubmit}>
     <div className="search">
 
-        <input type="text" 
+<form>
+        <input 
+        type="text" 
         placeholder={placeholder} 
-        className="searchInputs"
-        // value={eventname}
-        // // onChange={(event) => {
-        // //   // setName(event.target.value);
-        // }}
-        />
+        value={searchTerm}
+        onChange={handleSearchChange}
+        className="searchInputs"/>
         <Button className='searchIcon'><i className="fa-solid fa-magnifying-glass"></i></Button>
-        
-    </div> 
-
-  )
-}
-
+</form>
+ 
+     <div>
+       {searchResults.map((event) => (
+        <EventCard key={event._id} eve={event} />
+      ))}
+  </div>
+</div>
+</form>
+  )}
 export default SearchBar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

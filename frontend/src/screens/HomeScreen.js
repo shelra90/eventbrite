@@ -7,6 +7,8 @@ import {Button} from 'react-bootstrap';
 import Loader from '../components/Loader';
 import Message from '../components/Message'
 
+// import SearchBar from '../components/SearchBar';
+
 const HomeScreen=()=>{
   const [category, setCategory] = useState('');
   // const [events,setEvents]=useState([]);
@@ -16,6 +18,7 @@ const HomeScreen=()=>{
   const eventList = useSelector((state) => state.eventList)
   const {loading, error, events} = eventList || {loading: false, error: "", events:[]}
 
+  
 
     useEffect(()=>{
       dispatch(listEvents())
@@ -51,10 +54,29 @@ const HomeScreen=()=>{
               </Row>)
             }
           </div>
-           
-        </>
-    )
+     {/* //insert seachcode
+
+     <div>
+
+   
+     return (
+    <Container>
+      <SearchBar category={category} setCategory={setCategory} search={search} setSearch={setSearch} />
+      {loading ? (
+        <Loader />
+      ) : error ? (
+        <Message variant="danger">{error}</Message>
+      ) : (
+        <SearchBar events={events} category={category} search={search} />
+      )}
+    </Container>
+     )
+     
+    </div> */}
+</>
+)
 }
+
 
 export default HomeScreen
 

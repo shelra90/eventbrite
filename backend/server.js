@@ -4,16 +4,16 @@ import path from 'path';
 import errorHandler from './middleware/errorMiddleware.js';
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
-// const events=require('./data/events');
 import eventRoutes from './routes/eventRoutes.js'
-
-
-
 import connectDB from './config/db.js';
+
+
 
 const app = express();
 dotenv.config()
 connectDB()
+
+
 
 app.use(express.json())
 app.use('/api/events', eventRoutes)
@@ -35,21 +35,4 @@ if (process.env.NODE_ENV === 'production'){
 app.use(errorHandler)
 const PORT = process.env.PORT
 app.listen(PORT,console.log('server is running on port ${PORT}'))
-
-// app.get('/api/events',(req,res)=>{
-//     res.json(events)
-// })
-
-// app.get('/api/event/:id',(req,res)=>{
-//     const event=events.find(e=>e.Id==req.params.id);
-//     res.json(event)
-// })
-
-
-//app.get('/api/event/:id',(req,res)=>{
-
-  //  const event=events.find(e=>e.Id==req.params.id);
-   // console.log(event)
-   // res.json(event)
-//})
 
