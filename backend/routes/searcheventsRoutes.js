@@ -6,4 +6,4 @@
 
 // router.get('/search', searchEvents);
 
-// module.exports = router;
+// export default router
