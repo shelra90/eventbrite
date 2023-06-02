@@ -13,14 +13,15 @@ code {
 }
 
 .title {
-  color:#E65100
+  color:#E65100;
+ 
 }
-
-
 
 main{
   min-height:80vh;
 }
+
+/* styling for EventCard */
 .venue{
   font-size: 12px;
 }
@@ -41,13 +42,13 @@ main{
   height: 432px;
 }
 
-
+/*Styling for eventScreen*/
 .description{
   font-size: 13px;
   margin-top: 10px;
 }
 .addtocart{
-  margin-left: 57px;
+  text-align: center;
 }
 .drop{
   width: 78px;
@@ -56,12 +57,24 @@ main{
 .priceinAddtoCart{
   margin-left: -58px;
 }
+.EveScrnHeadings{
+  font-weight: bold;
+}
+.eventScreenImg{
+height: 200px;
+}
+.eventScreendetails{
+  margin-top: -15px;
+}
+
+/* styling for homeScreen */
 .categories{
-  margin-top: 55px;
+  margin-top: 20px;
   margin-bottom: 58px
 }
 .catButton{
   margin-right: 28px;
+  width:150px
 }
 .searchIcon{
   height: 35px;
@@ -156,14 +169,32 @@ main{
 .checkoutBox{
   margin-top: 10px;
 }
+.EventsInCart{
+  margin-top:10px
+}
+.shoppingCart{
+  margin-top: 20px;
+  margin-left: 18px;
+}
 /* End of Cart Screen Styling */
 
 
 /* PlaceOrder Screen Styling */
 .placeOrderScreenImages{
   height:250px;
+  margin-left: -12px;
 }
-
+.paymentMethod{
+  font-weight: bold;
+  font-size: 20px;
+}
+.orderItems{
+  /* text-align: center; */
+  margin-bottom: 20px;
+}
+.orderSummary{
+  text-align:center
+}
 /* End of PlaceOrder Screen Styling */
 
 
@@ -171,5 +202,21 @@ main{
 .orderScreenImages{
   height:250px;
 }
-
+.orderScreenSummary{
+  text-align:center;
+  margin-top: 15px;
+}
 /* End of orderScreen Screen Styling */
+
+/* paymentScreen */
+.continueBtn{
+  margin-top: 10px;
+}
+
+/*profile Screen styling*/
+.updateBtn{
+  margin-top: 10px;
+}
+.ordersList{
+  text-align: center;
+}

@@ -27,6 +27,10 @@ const orderSchema = mongoose.Schema(
             update_time: { type: String },
             email_address: { type: String },
         },
+        paymentMethod:{
+            type:String,
+            default:'paypal'
+        },
         taxPrice: {
             type: Number,
             required: true,

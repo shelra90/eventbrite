@@ -26,7 +26,7 @@ const HomeScreen=()=>{
 
         <>
           <div className='categories'>
-            <h3>CheckOut your favourite Categories</h3>
+            {/* <h3 className='catHeading'>CheckOut your favourite Categories</h3> */}
             <Button onClick={()=>setCategory('Music')} className='catButton'>Music</Button>
             <Button onClick={()=>setCategory('Sports&Fitness')} className='catButton'>Sports & Fitness</Button>
             <Button onClick={()=>setCategory('Food&Drink')} className='catButton'>Food & Drinks</Button>

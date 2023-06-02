@@ -100,13 +100,13 @@ const ProfileScreen = () => {
             ></Form.Control>
           </Form.Group>
 
-          <Button type='submit' variant='primary'>
+          <Button className='updateBtn' type='submit' variant='primary'>
             Update
           </Button>
         </Form>
       </Col>
-      <Col md={9}>
-        <h2>My Orders</h2>
+      <Col md={8}>
+        <h2 className='ordersList'>My Orders</h2>
         
         {orderItems.length === 0? (
                 <Message>
@@ -118,10 +118,10 @@ const ProfileScreen = () => {
                          <ListGroup.Item key={item.name}>
                             <Row>
                            
-                    <Col md={3}>
+                    <Col md={6}>
                             {item.name}
                     </Col>
-                    <Col md={2}>qty: {item.qty}</Col>
+                    <Col md={3}>qty: {item.qty}</Col>
                     <Col md={1}>${item.price}</Col>
                     </Row>
                     </ListGroup.Item>

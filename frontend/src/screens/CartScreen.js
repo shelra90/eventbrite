@@ -30,7 +30,8 @@ const CartScreen = () => {
   return (
     <Row>
         <Col md={8}>
-            <h1>Shopping Cart</h1>
+            <h3 className='shoppingCart'>Shopping Cart</h3>
+            
             {cartItems.length === 0? (
                 <Message>
                     Your cart is empty <Link to='/'>Go Back</Link>
@@ -39,7 +40,7 @@ const CartScreen = () => {
                 <ListGroup variant='flush'>
                     {cartItems.map((item) => (
                          <ListGroup.Item key={item.event}>
-                            <Row>
+                            <Row className='EventsInCart'>
                     <Col md={4}>
                         <Image className='cartScreenImage' src={item.image} alt={item.name}
                         fluid rounded />
