@@ -39,7 +39,7 @@ const SearchBar = ({events, placeholder}) => {
       ))}
   </div>
 </div>
-</form>
+ </form>
   )}
 export default SearchBar
 

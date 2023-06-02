@@ -7,18 +7,26 @@ import {Button} from 'react-bootstrap';
 import Loader from '../components/Loader';
 import Message from '../components/Message'
 
-// import SearchBar from '../components/SearchBar';
+
 
 const HomeScreen=()=>{
   const [category, setCategory] = useState('');
-  // const [events,setEvents]=useState([]);
-
 
   const dispatch = useDispatch()
   const eventList = useSelector((state) => state.eventList)
   const {loading, error, events} = eventList || {loading: false, error: "", events:[]}
-
   
+
+// SR
+// const fetchEvents = async () => {
+//   try {
+//     const response = await axios.get(`/api/events/search?searchKey=${search}`);
+//     setEvents(response.data);
+//   } catch (error) {
+//     console.error('Error fetching events:', error);
+//   }
+// };
+
 
     useEffect(()=>{
       dispatch(listEvents())
@@ -51,28 +59,11 @@ const HomeScreen=()=>{
                   ))
                   }
                   
+
               </Row>)
             }
           </div>
-     {/* //insert seachcode
-
-     <div>
-
-   
-     return (
-    <Container>
-      <SearchBar category={category} setCategory={setCategory} search={search} setSearch={setSearch} />
-      {loading ? (
-        <Loader />
-      ) : error ? (
-        <Message variant="danger">{error}</Message>
-      ) : (
-        <SearchBar events={events} category={category} search={search} />
-      )}
-    </Container>
-     )
-     
-    </div> */}
+ 
 </>
 )
 }
