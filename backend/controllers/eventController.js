@@ -2,6 +2,8 @@ import asyncHandler from 'express-async-handler'
 import event from '../models/eventModel.js'
 
 
+
+
 const getEvents = asyncHandler(async (req, res) => {
     const events = await event.find({})
     res.json(events)
@@ -16,4 +18,13 @@ const getEventById = asyncHandler(async (req, res) => {
     }
 })
 
-export {getEvents, getEventById}
+const searchEvents=asyncHandler(async(req,res) => {
+    
+    const events = await event.find({$or:[
+    {EventName: new RegExp(req.query.input, 'i')},
+    {Description:new RegExp(req.query.input, 'i')},
+    {CategoryName:new RegExp(req.query.input, 'i')}]})
+    res.json(events)
+})
+
+export {getEvents, getEventById, searchEvents}
