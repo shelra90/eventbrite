@@ -24,6 +24,26 @@ export const listEvents = () => async (dispatch) => {
     }
 }
 
+export const listSearchEvents = (searchInput) => async (dispatch) => {
+  try {
+      dispatch({type: EVENT_LIST_REQUEST})
+      const {data} = await axios.get('/api/events/search?input='+searchInput)
+      dispatch({
+          type: EVENT_LIST_SUCCESS,
+          payload: data
+      })
+
+  }catch (error){
+      dispatch({
+          type: EVENT_LIST_FAIL,
+          payload: error.response && error.response.data.message 
+          ? error.response.data.message
+          : error.message
+      })
+
+  }
+}
+
 export const listEventDetails = (id) => async (dispatch) => {
     try{
       dispatch({type: EVENT_DETAILS_REQUEST})

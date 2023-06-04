@@ -1,5 +1,5 @@
 import express from 'express'
-import { getEventById, getEvents } from '../controllers/eventController.js'
+import { getEventById, getEvents, searchEvents } from '../controllers/eventController.js'
 import asyncHandler from 'express-async-handler'
 import event from '../models/eventModel.js'
 import multer from 'multer'
@@ -36,8 +36,7 @@ var upload = multer({
 // @route    GET /api/events
 // @access   public
 router.get('/', getEvents)
-
-
+router.get('/search',searchEvents)
 // @desc      Fetch single event by id
 // @route     GET /api/events/:id
 // @access    public

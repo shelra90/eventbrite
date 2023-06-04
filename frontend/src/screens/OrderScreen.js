@@ -38,7 +38,7 @@ const OrderScreen = () => {
     
     const addPayPalScript = async () => {
       const { data: clientId } = await axios.get('/api/config/paypal')
-      console.log("hari   "+clientId);
+      
       setClientId(clientId)
     }
     addPayPalScript()
@@ -55,11 +55,12 @@ const OrderScreen = () => {
     <Message variant='danger'>{error}</Message>
   ) : (
     <>
-      <h1>Order {order._id}</h1>
+      
       <Row>
         <Col md={8}>
           <ListGroup variant='flush'>
             <ListGroup.Item>
+            <p><strong>Order Id: </strong> {order._id}</p>
               <p>
                 <strong>Name: </strong> {order.user.name}
               </p>
@@ -71,7 +72,7 @@ const OrderScreen = () => {
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Payment Method</h2>
+              <h2>Payment Status</h2>
               <p>
                 <strong>Method: </strong>
                 {order.paymentMethod}
@@ -100,7 +101,7 @@ const OrderScreen = () => {
                             rounded
                           />
                         </Col>
-                        <Col>
+                        <Col md={4}>
                           <Link to={`/event/${item.event}`}>
                             {item.name}
                           </Link>
@@ -117,7 +118,7 @@ const OrderScreen = () => {
           </ListGroup>
         </Col>
         <Col md={4}>
-          <Card>
+          <Card className='orderScreenSummary'>
             <ListGroup variant='flush'>
               <ListGroup.Item>
                 <h2>Order Summary</h2>

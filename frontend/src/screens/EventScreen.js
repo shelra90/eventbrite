@@ -35,17 +35,17 @@ const EventScreen = () => {
         )
         : (<Row>
         <Col md={4}>
-          <Image src={event.Image} alt={event.EventName} fluid />
+          <Image className='eventScreenImg' src={event.Image} alt={event.EventName} fluid />
         </Col> 
         <Col md={5}>
-          <ListGroup variant='flush'>
+          <ListGroup className='eventScreendetails' variant='flush'>
             <ListGroupItem>
               <h3>{event.EventName}</h3>
             </ListGroupItem>
-            <ListGroupItem>Price: ${event.Price}</ListGroupItem>
-            <ListGroupItem >Location: {event.Location}</ListGroupItem>
-            <ListGroupItem >Date&Time:{event.Date}</ListGroupItem>
-            <ListGroupItem>Description: {event.Description}</ListGroupItem>
+            <ListGroupItem><span className='EveScrnHeadings'>Price:</span> ${event.Price}</ListGroupItem>
+            <ListGroupItem ><span className='EveScrnHeadings'>Location:</span> {event.Location}</ListGroupItem>
+            <ListGroupItem ><span className='EveScrnHeadings'>Date&Time:</span> {event.Date}</ListGroupItem>
+            <ListGroupItem><span className='EveScrnHeadings'>Description:</span> {event.Description}</ListGroupItem>
           </ListGroup>
         </Col>  
         <Col md={3}>
@@ -93,7 +93,7 @@ const EventScreen = () => {
                 </ListGroupItem>
               )}
 
-              <ListGroupItem>
+              <ListGroupItem className='addtocart'>
                 <Button
                   className='btn-block'
                   type='button'

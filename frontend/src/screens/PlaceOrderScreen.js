@@ -29,7 +29,7 @@ const PlaceOrderScreen = () => {
         Number(updatedCart.itemsPrice) +
         Number(updatedCart.taxPrice)
     ).toFixed(2)
-    console.log(updatedCart.itemsPrice)
+    
 
     const orderCreate = useSelector((state) => state.
     orderCreate)
@@ -44,6 +44,7 @@ const PlaceOrderScreen = () => {
     
 
     const placeOrderHandler = () => {
+        
         dispatch(
         createOrder({
         orderItems: cart.cartItems,
@@ -65,13 +66,13 @@ return (
             <ListGroup variant='flush'>
 
             <ListGroup.Item>
-                <h2>Payment Method</h2>
-                <strong>Method: </strong>
-                {cart.paymentMethod}
+                <text><span className='paymentMethod'>Payment Method: </span>{cart.paymentMethod} </text>
+                
+                
             </ListGroup.Item>
             
                 <ListGroup.Item>
-                    <h2>Order Items</h2>
+                    <h2 className='orderItems'>Order Items</h2>
                     {cart.cartItems.Length === 0 ? (
                         <Message> Your cart is empty </Message>
                             ) : (
@@ -87,13 +88,13 @@ return (
                                         rounded
                                         />
                                     </Col>
-                                    <Col>
+                                    <Col md={5}>
                                         <Link to ={`/event/${item.event}`}
                                         >
                                             {item.name}
                                         </Link>
                                         </Col>
-                                        <Col md={2}>
+                                        <Col md={3}>
                                     {item.qty} x ${item.price} = ${item.
                                         qty * item.price}
                                         </Col>
@@ -106,7 +107,7 @@ return (
          </ListGroup>
         </Col>
         <Col md={4}>
-            <Card>
+            <Card className='orderSummary'>
                 <ListGroup variant='flush'>
                     <ListGroup.Item>
                         <h2>Order Summary</h2>
@@ -117,12 +118,6 @@ return (
                             <Col>${updatedCart.itemsPrice}</Col>
                         </Row>
                     </ListGroup.Item>
-                <ListGroup.Item>
-                <Row>
-                    <Col>Items</Col>
-                    <Col>${updatedCart.itemsPrice}</Col>
-                </Row>
-                </ListGroup.Item>
                
                 <ListGroup.Item>
                     <Row>
@@ -136,10 +131,11 @@ return (
                                 <Col>${updatedCart.totalPrice}</Col>
                             </Row>
                             </ListGroup.Item>
-                            <ListGroup.Item>
-                {error && <Message variant='danger'>{error}</Message>}
-                </ListGroup.Item>
-                <ListGroup.Item>
+                    <ListGroup.Item>
+                        {error && <Message variant='danger'>{error}</Message>}
+                    </ListGroup.Item>
+
+                <ListGroup.Item >
                     <Button
                     type='button'
                     className='btn-block'

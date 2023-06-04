@@ -13,6 +13,7 @@ export const eventListReducer = (state = {events: []},action) => {
             return{loading: false, events: action.payload}
         case EVENT_LIST_FAIL:
             return{loading: false, error: action.payload}
+           
         default:
             return state
     }
