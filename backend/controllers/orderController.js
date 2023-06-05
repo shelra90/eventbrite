@@ -1,7 +1,7 @@
 import asyncHandler from 'express-async-handler'
 import Order from '../models/orderModels.js'
 
-
+import Event from '../models/eventModel.js'
 
 const addOrderItems = asyncHandler(async (req, res) => {
     const {
@@ -56,7 +56,13 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
             update_time: req.body.update_time,
             email_address: req.body.email_address
         }
-        
+        order.orderItems.forEach(async element => {
+            var event=await Event.findById(element.event._id)
+            if(event.countInStock>=element.qty){
+                event.countInStock-=element.qty;
+                await event.save()
+            }
+        });
         const updatedOrder = await order.save()
         res.json(updatedOrder)
     }else{

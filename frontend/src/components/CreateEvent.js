@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router';
 const CreateEvent=()=> {
 
 // States for registration
@@ -10,8 +11,9 @@ const [location, setLocation] = useState('');
 const [price, setPrice] = useState();
 const [date, setDate] = useState('');
 const [image, setImage] = useState(null);
+const [count, setCount] = useState();
 const dateInputRef = useRef(null);
-
+const navigate = useNavigate()
 
 // States for checking the errors
 const [submitted, setSubmitted] = useState(false);
@@ -48,6 +50,11 @@ setLocation(e.target.value);
 setSubmitted(false);
 };
 
+// Handling the price 
+const handleCount = (e) => {
+    setCount(e.target.value);
+    setSubmitted(false);
+    };
 
 // Handling the price 
 const handlePrice = (e) => {
@@ -73,20 +80,21 @@ const newEvent={
     Image:image,
     Location:location,
     Price:price, 
+    count:count,
     Date:date
 }
-console.log(newEvent);
+
 const postEvents=async()=>{
 
     const formData=axios.toFormData(newEvent);
     const data= await axios.post('/api/events/create',formData);
 
-    console.log(formData);
     
 }
 postEvents()
 setSubmitted(true);
 setError(false);
+navigate('/')
 }
 };
 
@@ -143,6 +151,10 @@ value={eventName} type="text" />
 <label className="label">Location*</label>
 <input onChange={handleLocation} className="input"
 value={location} type="text" />
+<br/>
+<label className="label">CountInStock</label>
+<input onChange={handleCount} className="input"
+value={count} type="text" />
 <br/>
 <label className="label">Price</label>
 <input onChange={handlePrice} className="input"

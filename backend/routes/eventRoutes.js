@@ -51,9 +51,10 @@ router.post('/create',  upload.single('Image'),asyncHandler(async (req, res) => 
         EventName:req.body.EventName,
         CategoryName:req.body.CategoryName,
         Description:req.body.Description,
-        Image:'events_images/'+ req.file.filename,
+        Image:'/events_images/'+ req.file.filename,
         Location:req.body.Location,
         Price:req.body.Price, 
+        countInStock:req.body.count,
         Date:req.body.Date
     }
     console.log(newEvent);
