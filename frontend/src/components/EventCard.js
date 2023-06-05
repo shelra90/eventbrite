@@ -10,7 +10,7 @@ const EventCard = ({eve}) => {
     <div>
     <Card className='my-3 p-3 rounded'>
       <Link to={`/event/${eve._id}`}>
-        <Card.Img src={eve.Image} variant='top'></Card.Img>
+        <Card.Img className ="cardImage" src={eve.Image} variant='top'></Card.Img>
         </Link>
         <Card.Body>
           <Card.Title as='div'>

@@ -112,6 +112,8 @@ export const createOrder = (order) => async (dispatch,
                 type: ORDER_PAY_SUCCESS,
                 payload: data,
                 })
+
+                localStorage.removeItem('cartItems')
             } catch (error) {
                 dispatch({
                     type: ORDER_PAY_FAIL,
