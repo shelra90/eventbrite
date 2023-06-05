@@ -229,3 +229,14 @@ width:100%;
 .ordersList{
   text-align: center;
 }
+
+
+/* LoginScreen styling */
+.signInBtn{
+  margin-top: 10px;
+}
+
+/* RegisterScreen Stylling */
+.registerBtn{
+  margin-top: 10px; 
+}

@@ -29,7 +29,7 @@ const LoginScreen = () => {
   const submitHandler = (e) => {
     e.preventDefault()
     dispatch(login(email, password))
-    navigate('/payment')
+   
   }
   return (
     <FormContainer>
@@ -57,7 +57,7 @@ const LoginScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Button type='submit' variant='primary'>
+        <Button className='signInBtn' type='submit' variant='primary'>
           Sign In
         </Button>
       </Form>
