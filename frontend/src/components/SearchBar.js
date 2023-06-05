@@ -3,21 +3,21 @@ import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { listSearchEvents } from '../actions/eventActions'
+import {useNavigate } from 'react-router-dom'
 
 const SearchBar = ({placeholder, data}) => {
   const [input,setInput]=useState('');
 
   const dispatch=useDispatch()
-
+  const navigate=useNavigate()
   const handleEnter = (e)=>{
     if(e.key==='Enter'){
-      dispatch(listSearchEvents(input))
+      navigate(`/?input=${input}`);
     }
   };
 
   const handleclick = ()=>{
-    console.log(input)
-    dispatch(listSearchEvents(input))
+    navigate(`/?input=${input}`);
   };
 
   return (
